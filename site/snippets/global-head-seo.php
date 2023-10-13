@@ -34,7 +34,8 @@ if($page->description() != '') {
 } elseif($page->intendedTemplate() == 'berman.140') {
   $shareDescription = 'Berman140 description';
 } elseif($page->text() != '') {
-  $shareDescription = excerpt($page->text(), '140');
+  // TODO: replace with chopper $shareDescription = excerpt($page->text(), '140');
+  $shareDescription = $page->text();
 } else { $shareDescription = NULL; }
 
 

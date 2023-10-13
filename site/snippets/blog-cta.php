@@ -20,7 +20,8 @@ if($page->template() == 'blog-berman140') {
 // variables
 $url = $page->url();
 $title = urlencode($page->title());
-$excerpt = excerpt($title, 60);
+// TODO: replace with chopper $excerpt = excerpt($title, 60);
+$excerpt = $title;
 $contact = $pages->find('contact');
 
 // social image

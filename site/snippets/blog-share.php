@@ -3,7 +3,7 @@
 <div class="share-container">
 
   <a class="share share-twitter" target="_blank"
-    href="https://twitter.com/share?url=<?= $page->url() ?>&text=<?= excerpt($page->title(), 60) ?>&via=<?= $pages->find('contact')->twitter() ?>&hashtags=<?php
+    href="https://twitter.com/share?url=<?= $page->url() ?>&text=<? /* TODO: replace with chopper = excerpt($page->title(), 60) */ echo $page->title() ?>&via=<?= $pages->find('contact')->twitter() ?>&hashtags=<?php
 
     $topic = $page->primary_topic();
     $topic = preg_replace('/\s+/', '', $topic);
