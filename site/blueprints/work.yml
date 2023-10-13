@@ -1,0 +1,63 @@
+title: Work Page
+icon: briefcase
+pages:
+  sortable: true
+  template:
+    - 'work-textblock'
+    - 'work-background'
+    - 'work-image'
+    - 'work-logo'
+    - 'work-one-pager'
+    - 'work-booklet'
+    - 'work-screenshots'
+    - 'work-video'
+    - 'work-slideshow'
+
+fields:
+  title: title
+  headline:
+    extends: headline
+    label: Micro headline
+    help: Should mention the category and be as concise as possible. Used on work thumbnails and 'next up' links.
+
+  heroImg:
+    extends: heroImg
+    width: 1/3
+  thumbImg:
+    extends: workThumb
+    width: 1/3
+  nextImg:
+    extends: nextImg
+    width: 1/3
+  logoImgSvg: logoImgSvg
+  logoImgPng: logoImgPng
+  tags:
+    label: Tags
+    type: tags
+    default: branding
+    width: 1/3
+
+  line:
+    type: line
+
+  info:
+    type: info
+    text: >
+
+      <h2>Content Block Templates:</h2>
+
+      <p>Each work page is made up of multiple content block components, which will appear as individual pages on the left sidebar. You can edit an existing content block by clicking it in the directory to the left.</p>
+
+      <p></p>Here's a description of each content block type:</p>
+
+      <ul>
+        <li><b>Textblock</b>: <small>A standard block of text.</small></li>
+        <li><b>Background Image</b>: <small>A big full bleed image. Should usually follow a textblock.</small></li>
+        <li><b>Image + Caption</b>: <small>Single image on the left, caption on the right.</small></li>
+        <li><b>Logo</b>: <small>Logo on the left, caption on the right.</small></li>
+        <li><b>One-pager</b>: <small>Caption on the left, up to three images on the right with a perspective effect. Used for posters and such.</small></li>
+        <li><b>Booklet</b>: <small>Caption on the left, carousel on the right with a perspective effect. Used for booklets.</small></li>
+        <li><b>Screenshots</b>: <small>Display 2-8 items in a grid, against an adjustable background color. Drop shadow, a thin white border, and rounded corners will be added to each screenshot.</small></li>
+        <li><b>Video</b>: <small>Caption on the left, YouTube or Vimeo video on the right. More than one video will be displayed in a carousel.</small></li>
+        <li><b>Slideshow</b>: <small>If you must.</small></li>
+      </ul>

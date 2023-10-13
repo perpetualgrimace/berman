@@ -1,0 +1,46 @@
+title: Berman140 Post
+icon: users
+pages: false
+
+fields:
+  title:
+    extends: title
+    width: 2/3
+  date:
+    extends: date
+    width: 1/3
+
+  responses:
+    label: Responses
+    type: structure
+    entry: >
+      {{person}}:<br />
+      {{response}}
+    fields:
+      person:
+        label: Person
+        type: select
+        options: query
+        query:
+          page: about/people
+          fetch: children
+      response:
+        label: Response
+        type: markdown
+        tools:
+          - italic
+          - link
+
+  heroImg: heroImg
+  thumbImg: blogThumb
+  socialImg:
+    extends: socialImg
+    width: 1/3
+  linkedinImg: linkedinImg
+  nextImg:
+    extends: nextImg
+    width: 1/3
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

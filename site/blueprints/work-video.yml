@@ -1,0 +1,22 @@
+title: Video
+pages: false
+preview: parent
+icon: youtube-play
+options:
+  url: false
+
+fields:
+  title:
+    extends: title
+    label: Section title
+  text:
+    label: Caption
+    type: markdown
+    toolbar: false
+    required: true
+    width: 2/3
+  videoList: videoList
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

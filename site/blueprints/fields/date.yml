@@ -1,0 +1,4 @@
+label: Publication Date
+type: date
+width: 1/2
+format: mm/dd/YYYY

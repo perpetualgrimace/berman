@@ -1,0 +1,71 @@
+////////////////////////////////
+// blockquotes
+////////////////////////////////
+
+blockquote {
+  border-left: none;
+  quotes: none;
+
+  // quotation mark
+  &:before {
+    position: absolute;
+    content: '\201F';
+    font-family: georgia, serif;
+    font-size: $giga * 1.25;
+    top: 2.85rem;
+    left: -2.625rem;
+    line-height: 0.01rem;
+    color: $secondary-color;
+  }
+
+  // the quote
+  * {
+    @include utopia-italic;
+    line-height: 1;
+    font-size: $gamma;
+  }
+
+  // the attribution
+  * + *:last-child {
+    @include lato;
+    display: block;
+    font-size: $delta;
+    text-align: right;
+  }
+}
+
+
+// indent on smaller screens
+@media (max-width: $l1 - 0.001) {
+  blockquote {
+    padding-left: $gutter * 3;
+
+    &:before {
+      left: -0.25rem;
+    }
+  }
+}
+
+@media (min-width: $m3) {
+  aside blockquote {
+    padding-left: $gutter * 1.5;
+
+    &:before {
+      left: -1.3rem;
+    }
+  }
+}
+
+// blockquote in cms content
+// TODO: make this less stinky
+article > blockquote * {
+  line-height: 1.5;
+}
+
+
+// signature
+.custom-signature {
+  margin-top: 1.5rem;
+  max-width: rem(250);
+  left: -0.25rem;
+}

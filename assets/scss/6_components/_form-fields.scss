@@ -1,0 +1,196 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// field container
+.field:hover input {
+  color: $secondary-color;
+}
+
+
+// fields and textareas
+input:not([type=submit]):not([type=file]),
+textarea {
+outline: none;
+
+  &:hover {
+   border-color: $secondary-color;
+   box-shadow: inset 0 0 0 1px $secondary-color;
+  }
+  &:focus {
+   border-color: $brand-color;
+   box-shadow:
+   inset 0 0 0 1px $brand-color,
+   0 0 0.25em rgba($brand-color, 0.5);
+  }
+}
+
+// labels
+label {
+  display: block;
+  padding-bottom: $gutter; // extend clickable area
+  margin-top: -0.75rem; // compensate for added height in the grid
+  margin-bottom: -0.75rem; // compensate for padding-bottom
+  color: $brand-color;
+}
+
+// contact form
+.contact-submit {
+  margin-top: -2rem; // compensate for grid
+}
+
+
+////////////////////////////////
+// custom select
+////////////////////////////////
+
+.select-container {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: $radius;
+  background: $brand-color;
+  background-image: radial-gradient(ellipse at top center, rgba($white, 0.15) 0, rgba($black, 0) 100%); // radial glossy overlay
+  border: $stroke-thin solid $brand-color;
+
+
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+  &:focus,
+  &.is-focused {
+    @include box-shadow-focus;
+  }
+  &:active {
+    background-color: $secondary-color-dark;
+    border-color: $secondary-color-dark;
+  }
+
+  // icon
+  &:after {
+    @include pseudo;
+    @include svg('select', 'img/icons/');
+    background-size: rem(11) rem(14);
+    position: absolute;
+    width: rem(11);
+    height: rem(14);
+    right: 0.5em;
+    top: 0.5em;
+    pointer-events: none;
+  }
+
+  // unstyle select element
+  select {
+    font-size: $milli;
+    background: transparent;
+    border: none;
+    padding: 0.5em 2em 0.5em 0.5em;
+    margin-top: -0.25em;
+    width: 100%;
+    max-width: 100%;
+    /* autoprefixer: off */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    /* autoprefixer: on */
+  }
+}
+
+// select labels get specifc style
+.select-label {
+  clear: both;
+  display: block;
+  margin-top: 1em;
+  padding-top: $gutter; // extend clickable area
+}
+
+
+
+////////////////////////////////
+// legacy
+////////////////////////////////
+
+// inputs
+
+input:not([type=submit]):not([type=file]),
+textarea {
+  padding: 0.25rem 0.75rem 0.5rem;
+  width: 100%;
+  background: $white;
+  color: $black;
+  border: 1px solid $shadow;
+  border-radius: $radius;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $white;
+  }
+}
+
+textarea {
+   resize: vertical;
+   }
+
+textarea {
+   min-height: 10.375em;
+   max-height: 20rem;
+   }
+
+// error / success messages
+
+.message-success, .message-fail {
+  padding-top: 2rem;
+
+  @media (min-width: $m3) {
+    padding-top: 4rem;
+  }
+}
+
+// initially hide errors and alerts
+.error,
+.alert {
+  display: none;
+}
+
+// error label
+.error {
+  bottom: -0.5em;
+  position: absolute;
+  color: $error-color;
+}
+
+// mailchimp
+/*
+.mc-subscribe-container {
+  display: flex;
+  vertical-align: top;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  .mc-field-group {
+    display: table-cell;
+    border-collapse: collapse;
+    vertical-align: top;
+    width: 100%;
+
+
+    input {
+      margin-top: 0;
+      vertical-align: top;
+      width: 100%;
+      height: 2.5em;
+    }
+  }
+  button {
+    display: block;
+    left: -1px;
+    margin-top: 0;
+  }
+}
+*/

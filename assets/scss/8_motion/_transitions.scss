@@ -1,0 +1,162 @@
+$duration: 0.3s;
+$easing: cubic-bezier(0.6, 0, 0.4, 1);
+
+$timing: $duration $easing;
+
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// interactive stuff
+a, label, input, textarea, button,
+[class*=button], button:after,
+.select-container {
+  transition:
+    color $timing,
+    opacity $timing,
+    background $timing,
+    border $timing,
+    transform $timing,
+    box-shadow $timing;
+}
+
+// images
+img, [class*='img'] {
+  transition:
+    opacity $timing,
+    transform $timing,
+    box-shadow $timing;
+}
+
+.hero-img {
+  transition:
+    opacity 1.5s $easing,
+    transform 1.5s $easing;
+}
+
+.home-hero-img {
+  transition:
+    opacity 2s $easing,
+    transform 2s $easing;
+}
+
+// svgs
+svg * {
+  transition:
+    fill $timing,
+    stroke $timing,
+    opacity $timing;
+}
+
+a > svg,
+.screenshot-item {
+  transition: transform $timing;
+}
+
+// hack to get transitions in sync-ish
+.card-meta-series-link:hover .card-icon g rect {
+  transition: none !important;
+}
+
+// nav list smooth expand / collapse
+.nav-list,
+.dropdown,
+.hero {
+  transition:
+    opacity $timing,
+    transform $timing;
+}
+
+// hamburger
+.hamburger,
+.hamburger-bun,
+.attribution-avatar {
+  transition: transform $timing;
+}
+
+// skip link
+.skip {
+  transition:
+    color $timing,
+    background $timing,
+    border $timing,
+    box-shadow $timing,
+    transform $timing,
+    opacity $timing;
+}
+
+// next/prev
+.bx-next:before,
+.bx-prev:before {
+  transition: box-shadow $timing;
+}
+
+
+// thumbnails
+.thumb-item,
+.thumb-img,
+.thumb-underlay {
+  will-change: transform, opacity;
+  transition: opacity $timing;
+}
+@media (min-width: $m2) {
+  .thumb-item {
+    transition: background $timing;
+  }
+  .thumb-img,
+  .thumb-link,
+  .thumb-underlay {
+    transition:
+      transform $timing,
+      opacity $timing,
+      background $timing;
+  }
+  .thumb-link:before {
+    transition:
+      transform $timing,
+      box-shadow $timing,
+      background $timing;
+  }
+}
+
+// cards
+.card-caption-name {
+  transition: color $timing;
+}
+
+// long shadow
+.header-headline,
+.home-header-subhead,
+.quote-text,
+.next-title {
+  transition: text-shadow $timing;
+}
+
+// home hero
+.home-hero {
+  transition: transform-origin 0.125s $easing;
+}
+.home-headline {
+  transition: text-shadow 1s $easing;
+}
+
+// cta
+.next {
+  transition: background $timing;
+}
+
+// override for person hover effeccts
+.card-img-hover {
+  transition: none;
+}
+
+
+////////////////////////////////
+// magnific popup
+////////////////////////////////
+
+// fade opacity when removing, and that's it
+.mfp-removing {
+  opacity: 0;
+  transition: opacity $timing;
+}

@@ -1,0 +1,10 @@
+label: Pages
+type: structure
+required: true
+style: table
+width: 1/3
+fields:
+  page:
+    label: page
+    type: image
+    required: true

@@ -1,0 +1,1 @@
+Text: Throughout the initiative, WriteSomethi.ng kept people engaged across social media platforms with tweets and Facebook posts of #FailedStoryIdeas and #BestOfGreg.

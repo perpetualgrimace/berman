@@ -1,0 +1,4 @@
+label: Next image
+type: image
+help: 'Recommended size: 1440px × 320px. Optimize at <a href="http://tinypng.org">tinypng.org</a> before uploading. If none is supplied the hero image will be used.'
+width: 1/2

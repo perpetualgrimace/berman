@@ -1,0 +1,1 @@
+Text: The Digital Hands homepage puts their people front and center. This fully responsive site uses original photography and a distinctive illustrative style to bring a unique energy to the Digital Hands brand.

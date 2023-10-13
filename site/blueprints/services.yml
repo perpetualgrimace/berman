@@ -1,0 +1,50 @@
+title: Services page template
+pages: false
+files: true
+icon: shopping-bag
+
+fields:
+  title: title
+  headline: headline
+  heroImg: heroImg
+  socialImg: socialImg
+  text: defaultText
+
+  servicesHeadline:
+    label: Services headline
+  brandStrategyTitle:
+    label: Brand strategy title
+    width: 1/4
+  brandstrategyList:
+    label: Brand strategy list
+    type: markdown
+    toolbar: false
+    width: 3/4
+  brandAssetsTitle:
+    label: Brand assets title
+    width: 1/4
+  brandAssetsList:
+    label: Brand assets list
+    type: markdown
+    toolbar: false
+    width: 3/4
+  brandExperiencesTitle:
+    label: Brand experiences title
+    width: 1/4
+  brandExperiencesList:
+    label: Brand experiences list
+    type: markdown
+    toolbar: false
+    width: 3/4
+
+  quote: quote
+
+  # ctaLine: ctaLine
+  # ctaHelp: ctaHelp
+  # cta: cta
+  # ctaButton: ctaButton
+  # ctaLink: ctaLink
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

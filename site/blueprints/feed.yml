@@ -1,0 +1,16 @@
+title: RSS feed
+icon: rss
+pages: false
+files: false
+options:
+  status: false
+  template: false
+  url: false
+  delete: false
+
+fields:
+  title: title
+  headline: headline
+  description:
+    extends: description
+    label: Blog description

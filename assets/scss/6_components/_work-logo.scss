@@ -1,0 +1,19 @@
+////////////////////////////////
+// work.logo
+////////////////////////////////
+
+// container
+.work-logo-container {
+  @include flex-vertical-center;
+}
+
+// img
+.work-logo-img {
+  float: left;
+  margin-right: $gutter * 2;
+
+  // smaller screens be squishier
+  @media (max-width: $m2 - 0.001) {
+    max-width: 5rem;
+  }
+}

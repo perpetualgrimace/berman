@@ -1,0 +1,34 @@
+title: Home page template
+pages: false
+files: true
+icon: home
+options:
+  status: false
+
+fields:
+  title: title
+  headline: headline
+  subhead:
+    type: markdown
+    label: Subhead
+    toolbar: false
+    width: 1/2
+  heroImg: heroImg
+  text:
+    extends: defaultText
+    label: Intro text
+  quote1: quote
+  services:
+    extends: defaultText
+    label: Services text
+  quote2: quote
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaButton: ctaButton
+  ctaLink: ctaLink
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

@@ -1,0 +1,46 @@
+title: About page template
+pages: false
+files: true
+icon: info-circle
+options:
+  url: false
+
+fields:
+  title: title
+  headline: headline
+  heroImg: heroImg
+  socialImg: socialImg
+  text: defaultText
+  quote1: quote
+  clients:
+    extends: defaultText
+    label: Clients text
+  quote2: quote
+
+  principlesHeadline:
+    label: Principles headline
+  integrity:
+    type: markdown
+    label: Integrity text
+    toolbar: false
+    width: 1/3
+  ability:
+    type: markdown
+    label: Ability text
+    toolbar: false
+    width: 1/3
+  spirit:
+    type: markdown
+    label: Spirit text
+    toolbar: false
+    width: 1/3
+
+  # ctaLine: ctaLine
+  # ctaHelp: ctaHelp
+  # cta: cta
+  # ctaButton: ctaButton
+  # ctaLink: ctaLink
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

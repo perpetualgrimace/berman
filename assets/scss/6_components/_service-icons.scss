@@ -1,0 +1,53 @@
+.service-list {
+  // Specify a reasonable max-width. Both lines necessary.
+  width: 100%;
+  max-width: 36rem; // just enough room for each title to not wrap
+  // allow block to be centered via text-align
+  display: inline-block;
+
+  // buy some extra horizontal space on smaller screens
+  @media (max-width: 30em - 0.001) {
+    // extend width past 100% via calc
+    max-width: none;
+    width: calc(100% + #{$gutter * 4});
+    // use negative margin, but only if calc is supported
+    margin-left: calc(#{-$gutter * 2}) !important;
+    margin-right: calc(#{-$gutter * 2}) !important;
+  }
+}
+
+.service-image-container {
+  @media (min-width: $sm1) {
+    width: 33.333% !important;
+  }
+}
+
+.service-image {
+  transform: scale(0.9);
+}
+
+.service-image-link {
+  &:hover, &:active, &:focus {
+    .service-image {
+      transform: none;
+    }
+  }
+}
+
+.service-heading {
+  display: block;
+
+  // smaller screens
+  @media (max-width: $m2 - 0.001) {
+    font-size: $delta;
+  }
+
+  // tiny screens
+  @media (max-width: $sm1 - 0.001) {
+    font-size: $milli;
+  }
+}
+
+.service-item {
+  margin-top: 0.5em;
+}

@@ -1,0 +1,19 @@
+title: Logo
+pages: false
+preview: parent
+icon: apple
+
+fields:
+  title:
+    label: Title
+    type: text
+  logoImgSvg:
+    extends: logoImgSvg
+    width: 1/2
+  logoImgPng:
+    extends: logoImgPng
+    width: 1/2
+  text:
+    label: 'Caption:'
+    required: true
+    type: markdown

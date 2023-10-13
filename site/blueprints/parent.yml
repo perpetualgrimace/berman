@@ -1,0 +1,30 @@
+title: Parent Page
+icon: list
+pages: true
+  template:
+    - sibling
+    - parent
+    - default
+
+fields:
+  title: title
+  headline: headline
+  heroImg: heroImg
+  socialImg: socialImg
+  text:
+    extends: defaultText
+    width: 2/3
+  sidebarTitle:
+    label: Sidebar Title
+    type: markdown
+    toolbar: false
+    width: 1/3
+
+  ctaLine: ctaLine
+  cta: cta
+  ctaButton: ctaButton
+  ctaLink: ctaLink
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

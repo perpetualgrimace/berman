@@ -1,0 +1,8 @@
+label: Author
+type: structure
+width: 1/2
+required: true
+fields:
+  author:
+    label: Author
+    type: user

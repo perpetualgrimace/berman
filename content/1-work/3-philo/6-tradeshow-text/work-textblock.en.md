@@ -1,0 +1,1 @@
+Text: To reach university administrators who make purchase decisions, and IT directors who implement the solution, we created brochures and tradeshow banners highlighting the benefits to student life and the ease of integrating Philo with their existing infrastructure.

@@ -1,0 +1,19 @@
+label: Videos
+type: structure
+required: true
+style: table
+fields:
+  platform:
+    label: Platform
+    type: select
+    default: youtube
+    required: true
+    options:
+      youtube: YouTube
+      vimeo: Vimeo
+      dailymotion: Dailymotion
+  id:
+    label: Video ID
+    help: >
+      The Video ID is usually the last part of the URL. Examples: <ul><li>youtube.com/watch?v=<strong style="color: black; font-weight: bold;">tntOCGkgt98</strong></li><li>vimeo.com/<strong style="color: black; font-weight: bold;">82697665</strong></li><li>dailymotion.com/video/<strong style="color: black; font-weight: bold;">x4o6cky</strong>_funny-cats-compilation-funny-cats-a-funny-cat-videos-compilation-2016-new-hd_animals</li></ul>
+    required: true

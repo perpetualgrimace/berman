@@ -1,0 +1,74 @@
+title: Standard Blog Post
+icon: pencil
+pages: false
+options:
+  delete: true
+
+fields:
+  title:
+    extends: title
+    width: 2/3
+
+  toggleMeta:
+    label: Toggle metadata
+    type: fieldtoggle
+    width: 1/3
+    help: View authors, series, tags, etc.
+    on:
+      - authors
+      - date
+      - series
+      - description
+      - tags
+      - hashtag
+      - heroImg
+      - thumbImg
+      - socialImg
+      - linkedinImg
+      - nextImg
+      - byline
+      - related_manual
+      - seriesNum
+    off: text
+    default: false
+
+  line:
+    type: line
+
+  authors: authors
+  date: date
+  series: series
+  seriesNum: seriesNum
+
+  heroImg: heroImg
+  thumbImg: blogThumb
+  socialImg:
+    extends: socialImg
+    width: 1/3
+  linkedinImg: linkedinImg
+  nextImg:
+    extends: nextImg
+    width: 1/3
+
+  tags: tags
+  hashtag: hashtag
+  description: description
+
+  # related_manual:
+  #   label: 'Manually specify related articles:'
+  #   type: structure
+  #   limit: 10
+  #   width: 1/2
+  #   fields:
+  #     page:
+  #       type: select
+  #       options: visibleSiblings
+
+  text:
+    label: Blog Content
+    type: markdown
+    required: true
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

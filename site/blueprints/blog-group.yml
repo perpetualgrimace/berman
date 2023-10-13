@@ -1,0 +1,23 @@
+title: Blog group
+preview: false
+files: false
+icon: calendar
+
+options:
+  status: false
+  template: false
+  url: false
+pages:
+  limit: 50
+  sort: flip
+  sortable: true
+  template:
+    - blog
+    - blog-berman140
+
+fields:
+  info:
+    type: info
+    text: >
+
+      Hi. If you want to add a berman140 blog post, choose the template **Berman140 Post** instead of Standard Blog Post. Please and thank you.

@@ -1,0 +1,1 @@
+Text: And then the site launched, introducing the world to The Story of Greg, the Sentient All-Seeing Ornament and inviting people everywhere to contribute to his story.

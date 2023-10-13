@@ -1,0 +1,4 @@
+label: LinkedIn image
+type: image
+help: 'Must be exactly 180px × 110px. If an image of this size is not supplied then LinkedIn will pull the author image instead. ❄️'
+width: 1/3

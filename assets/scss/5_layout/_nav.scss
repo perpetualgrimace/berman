@@ -1,0 +1,388 @@
+////////////////////////////////
+// container
+////////////////////////////////
+
+// nav container
+.nav-container {
+  top: 0;
+  width: 100%;
+  z-index: 11;
+  background: linear-gradient(to bottom, $white 0%, rgba($white, 0.9) 100%);
+
+  @media (min-width: $m3) and (min-height: $sm2) {
+    position: fixed;
+  }
+}
+
+// nav element
+.nav-main {
+  height: $nav-height;
+
+  // base style for nav elements
+  * {
+    text-transform: uppercase;
+    font-size: $milli;
+    color: $black;
+  }
+}
+
+
+////////////////////////////////
+// logo
+////////////////////////////////
+
+// logo
+.nav-logo {
+  float: left;
+  height: $nav-height;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  left: -($gutter);
+
+  // svg positioning
+  svg, image {
+    margin-top: #{$nav-height / 3.5}; // fudged
+    height: auto;
+    width: 6.85rem;
+    top: 0;
+  }
+}
+
+// not active page
+.nav-logo {
+  svg path {
+    fill: $black;
+  }
+
+  // standard
+  &:hover,
+  &:focus,
+  &:active {
+    svg path {
+      fill: $secondary-color;
+    }
+  }
+}
+
+////////////////////////////////
+// main nav list
+////////////////////////////////
+
+// nav list
+.nav-list {
+  float: right;
+
+  // small screens
+  @media (max-width: $m2 - 0.001) {
+    @include dropdown-hidden;
+    @include fullwidth;
+    @include font-smoothing;
+    width: 100%; // fallback
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background: $black;
+
+    // prevent page jump
+    &:before {
+      @include pseudo;
+      width: 100%;
+      height: $nav-height;
+      background: $white;
+    }
+  }
+}
+
+// nav items
+.nav-item {
+  float: left;
+
+  // large screen style
+  @media (min-width: $m2) {
+    width: auto;
+    display: block;
+  }
+}
+
+// nav links
+.nav-link {
+  display: block;
+  line-height: $nav-height; // vertically center
+
+  @media (min-width: $m2) {
+    padding: 0 0.5rem;
+
+    &:hover, &:focus, &:active {
+      color: $secondary-color;
+    }
+  }
+
+  // active page
+  &.is-active-pg {
+    color: $brand-color;
+  }
+}
+
+
+////////////////////////////////
+// main nav on small screens
+////////////////////////////////
+
+// toggled list style
+@media (max-width: $m2 - 0.001) {
+  .nav-item {
+    width: 16.6%;
+    text-align: center;
+  }
+  .nav-link {
+    color: $white;
+
+    &.is-active-pg {
+      color: $white;
+      background: $brand-color;
+    }
+
+    &:hover, &:active, &:focus {
+      background: $secondary-color;
+    }
+  }
+}
+
+// tiny screens
+@media (max-width: $sm2 - 0.001) {
+  .nav-item {
+    width: 33.3333333333333%;
+  }
+}
+
+// super small screens
+@media (max-width: $sm1 - 0.001) {
+  .nav-item {
+    width: 100%;
+  }
+}
+
+
+////////////////////////////////
+// dropdown menu
+////////////////////////////////
+
+// dropdown menu
+.dropdown {
+  @include dropdown-hidden;
+  display: none; // hide on smaller screens
+
+  // show on bigger screens
+  @media (min-width: $m2) {
+    display: inline-block;
+    position: absolute;
+    top: $nav-height;
+    left: -1rem;
+  }
+}
+
+// states
+@media (min-width: $m2) {
+  // reveal dropdown menu when hovering/focusing parent
+  .dropdown:hover,
+  .nav-item:hover .dropdown,
+  // If the item has a dropdown and the link is focused, target the adjacent dropdown menu
+  .has-dropdown .nav-link:focus + .dropdown,
+  .nav-link:focus + .dropdown,
+  // .is-focused class, added to .dropdown on focus via js
+  .dropdown.is-focused {
+    @include dropdown-visible;
+  }
+}
+
+// dropdown link style
+.dropdown-link {
+  display: block; // respect padding
+  background: $black;
+  color: $white;
+  line-height: 2rem;
+  padding: 0.125rem 1.5rem 0.25rem;
+
+  // default
+  &:hover, &:active, &:focus {
+    background: $secondary-color;
+  }
+
+  // active page
+  &.is-active-pg {
+    background: $dark-2;
+  }
+
+}
+
+
+
+
+
+////////////////////////////////
+// nav menu toggle
+////////////////////////////////
+
+// expanded menu via js
+.nav-list.is-expanded {
+  @include dropdown-visible;
+}
+
+// menu toggle
+.nav-toggle {
+  position: absolute;
+  float: right;
+  height: $nav-height;
+  padding: ($gutter * 0.45) $gutter 0 $gutter; // somewhat fudged
+  right: 0;
+
+  &-text {
+    font-size: $delta;
+  }
+
+  // active state theming
+  &.is-active {
+    background: $black;
+
+    .hamburger-bun {
+      background: $white;
+    }
+    .nav-toggle-text {
+      color: $white;
+    }
+
+  }
+
+  // hide on large screens
+  @media (min-width: $m2) {
+    display: none;
+  }
+}
+
+// humburger icon
+.hamburger {
+  display: inline-block;
+  margin-right: 0.25rem;
+
+  // initial state
+  &-bun {
+    display: block;
+    width: ($stroke-width * 9);
+    height: $stroke-width;
+    border-radius: 1px;
+    background: $black;
+
+    & + & {
+      margin-top: ($stroke-width * 1.5);
+    }
+  }
+
+  // active state
+  &.is-active {
+    transform: translateX(5px);
+
+    .hamburger-bun-top {
+      transform: rotateZ(45deg) translateY(#{$stroke-width * 3.5});
+    }
+    .hamburger-bun-patty {
+      opacity: 0;
+    }
+    .hamburger-bun-bottom {
+      transform: rotateZ(-45deg) translateY(-#{$stroke-width * 3.5});
+    }
+  }
+}
+
+
+////////////////////////////////
+// social icons
+////////////////////////////////
+
+// social icons
+.nav-social-list {
+  display: none;
+  height: $nav-height;
+  width: 7rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  // show on big-enough screens
+  @media (min-width: $sm2) {
+    display: block;
+  }
+
+  // send to the right instead of centering on bigger screens
+  @media (min-width: $m2) {
+    float: right;
+    width: auto;
+    margin-left: $gutter;
+    margin-right: -($gutter * 0.5);
+  }
+}
+
+// social item
+.nav-social-item {
+  display: inline-block;
+  height: $nav-height;
+  overflow: hidden;
+}
+
+// social links
+.nav-social-link {
+  display: block;
+  padding: ($gutter * 0.7) ($gutter * 0.5); // fudged
+  max-height: $nav-height;
+
+  // scale icons with baseline
+  svg {
+    height: 1rem;
+
+    // default color
+    path {
+      fill: $black;
+    }
+  }
+}
+
+// :hover colors
+.nav-social-link-twitter {
+  &:hover path, &:active path, &:focus path {
+    fill: $twitter-color;
+  }
+}
+.nav-social-link-facebook {
+  &:hover path, &:active path, &:focus path {
+    fill: $facebook-color;
+  }
+}
+.nav-social-link-linkedin {
+  &:hover path, &:active path, &:focus path {
+    fill: $linkedin-color;
+  }
+}
+.nav-social-link-instagram {
+  &:hover path, &:active path, &:focus path {
+    fill: $instagram-color;
+  }
+}
+
+
+////////////////////////////////
+// skip link
+////////////////////////////////
+
+// skip link
+a.skip {
+  top: $nav-height + ($gutter / 2); // position under nav bar
+  z-index: 8;
+  transform: translateX(-100%);
+}
+.skip:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  transform: none;
+}

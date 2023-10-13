@@ -1,0 +1,27 @@
+aside > div + div {
+  margin-top: 2.625rem;
+}
+
+// baseline adjustment
+@media (min-width: $m2) {
+  .parent-sidebar,
+  .blog-sidebar {
+    top: 0.625rem;
+  }
+}
+
+// make it be two columns where there's enough space for that
+.blog-list-sidebar {
+  column-width: 11rem;
+  column-count: 2;
+  column-gap: $gutter * 2;
+
+  // baseline adjustment
+  @media (min-width: $m2) {
+    margin-top: 0.75rem;
+  }
+}
+
+.contact-sidebar {
+  top: 0.75rem;
+}

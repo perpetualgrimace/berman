@@ -1,0 +1,152 @@
+/* MODEL:
+
+.mfp-bg
+.mfp-wrap, .mfp-gallery, [js-class], [animation-class]
+__ .mfp-container
+____ .mfp-content
+______ .mfp-figure
+________ .mfp-close
+________ figure
+__________ .mfp-img
+__________ figcaption
+____________ .mf-bottom-bar
+______________ .mfp-title
+________________ .image-source-link
+______________ .mfp-counter
+____ .mfp-preloader
+____ .mfp-arrow.mfp-arrow-left
+____ .mfp-arrow.mfp-arrow-right
+__ .mfp-close
+
+*/
+
+
+////////////////////////////////
+// Positioning
+////////////////////////////////
+
+.mfp-bg,
+.mfp-wrap,
+.mfp-container,
+.mfp-iframe-scaler iframe {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// bg overlay
+.mfp-bg {
+  z-index: 12;
+  background: $black;
+}
+
+// main container container
+.mfp-wrap {
+  z-index: 13;
+  outline: none !important;
+  -webkit-backface-visibility: hidden; // fixes webkit bug that can cause "false" scrollbar
+}
+
+// main container
+.mfp-container {
+   text-align: center;
+   position: absolute;
+   overflow: hidden;
+}
+
+// content container
+.mfp-content {
+  @include vertical-center;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+
+// size images
+.mfp-img {
+  padding-top: $gutter * 1.5;
+  padding-bottom: $gutter * 1.5;
+  max-width: 90%;
+  max-width: calc(100vw - #{$gutter * 4.25});
+  margin: auto;
+}
+
+
+////////////////////////////////
+// Controls
+////////////////////////////////
+
+// close icon
+.mfp-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: ($gutter * 0.625) ($gutter * 0.3) $gutter ($gutter * 0.3);
+  color: $white;
+  font-size: $beta;
+  line-height: 0.1;
+
+  // interactions
+  &:hover, &:focus {
+    color: $secondary-color;
+  }
+}
+
+// 1 of 3
+.mfp-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: $gutter * 0.25;
+}
+
+// set color and font size for bottom bar
+.mfp-bottom-bar * {
+  color: $white;
+  font-size: $milli;
+}
+
+// arrows
+.mfp-arrow {
+  position: absolute;
+  top: 45%;
+
+  // default sizing
+  &:after {
+    display: block;
+    color: $white;
+    padding: $gutter * 0.1;
+    font-size: $gamma;
+  }
+}
+
+// left and right
+.mfp-arrow-left {
+  left: 0;
+
+  &:after {
+    content: '◀︎';
+  }
+}
+.mfp-arrow-right {
+  right: 0;
+
+  &:after {
+    content: '▶︎';
+  }
+}
+.mfp-arrow:hover:after,
+.mfp-arrow:hover:focus {
+  color: $secondary-color;
+}
+
+// hide preloader altogether
+.mfp-preloader {
+  display: none;
+}

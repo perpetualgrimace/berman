@@ -1,0 +1,11 @@
+label: Screenshots
+type: structure
+style: table
+fields:
+  screenshot:
+    label: screenshot
+    type: image
+    required: true
+  link:
+    label: link (optional but encouraged)
+    help: 'Important: make sure the link includes http:// or https:// in the beginning'

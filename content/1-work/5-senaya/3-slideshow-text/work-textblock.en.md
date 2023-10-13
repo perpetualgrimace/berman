@@ -1,0 +1,1 @@
+Text: We use design elements from the logo to draw viewers' attention to the newly expanded ability to track and measure assets in motion, almost as if those deploying the Senaya solution are accompanying their goods on their journeys.

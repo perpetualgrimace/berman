@@ -1,0 +1,115 @@
+title: Contact
+pages: false
+icon: phone
+
+fields:
+  title: title
+  headline: headline
+  heroImg: heroImg
+  socialImg: socialImg
+
+  line1:
+    type: line
+
+  showContactInfo:
+    label: Toggle contact info
+    type: fieldtoggle
+    on:
+      - labelName
+      - labelEmail
+      - labelText
+      - submitButton
+      - phone
+      - email
+      - address1
+      - address2
+      - twitter
+      - facebook
+      - instagram
+      - linkedin
+    default: false
+
+  labelName:
+    label: Name label
+    width: 1/4
+  labelEmail:
+    label: Email address label
+    width: 1/4
+  labelText:
+    label: Message label
+    width: 1/4
+  submitButton:
+    label: Submit button text
+    width: 1/4
+  phone:
+    label: Our Phone Number
+    type: text
+    width: 1/2
+  email:
+    label: Our Email Address
+    type: text
+    width: 1/2
+  address1:
+    label: Our Street Address
+    type: text
+    width: 1/2
+  address2:
+    label: Our City, St, Zip
+    type: text
+    width: 1/2
+  twitter:
+    label: Our Twitter Account
+    type: text
+    width: 1/4
+  facebook:
+    label: Our Facebook Account
+    type: text
+    width: 1/4
+  instagram:
+    label: Our Instagram Account
+    type: text
+    width: 1/4
+  linkedin:
+    label: Our Linkedin Account
+    type: text
+    width: 1/4
+
+  line2:
+    type: line
+
+  showUI:
+    label: Toggle UI messages
+    type: fieldtoggle
+    on:
+      error_name
+      errorText
+      error_email
+      error_email_invalid
+      success
+      fail
+    default: false
+
+  error_name:
+    label: No name
+    width: 1/2
+  errorText:
+    label: No message
+    width: 1/2
+  error_email:
+    label: No email address
+    width: 1/2
+  error_email_invalid:
+    label: Invalid email address
+    width: 1/2
+  success:
+    label: Success
+    type: markdown
+    width: 1/2
+  fail:
+    label: Catastrophic failure
+    type: markdown
+    width: 1/2
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

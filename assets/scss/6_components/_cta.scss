@@ -1,0 +1,19 @@
+////////////////////////////////
+// global cta
+////////////////////////////////
+
+.cta {
+  border: $stroke-thick solid $black;
+  padding-left: $gutter * 2;
+  padding-right: $gutter * 2;
+}
+
+////////////////////////////////
+// half-width cta
+////////////////////////////////
+
+.cta-half {
+  @media (min-width: $m3) {
+    max-width: 45%; // half of 90%. Yuck.
+  }
+}

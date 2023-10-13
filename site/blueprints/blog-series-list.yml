@@ -1,0 +1,19 @@
+title: Blog series list
+preview: false
+files: false
+icon: list
+
+options:
+  status: false
+  template: false
+  url: false
+pages:
+  template:
+    - blog-series
+
+fields:
+  info:
+    type: info
+    text: >
+
+      Hi. New series can be added here just like normal pages. They can then be selected from blog posts.

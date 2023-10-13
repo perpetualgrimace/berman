@@ -1,0 +1,120 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// definition lists
+dd {
+  margin-top: -0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+// inline lists
+.inline-list > li {
+  display: inline-block;
+}
+
+
+////////////////////////////////
+// legacy
+////////////////////////////////
+
+// triangular bullets
+
+article ul:not(.inline-list) {
+  margin-left: 1.9rem;
+}
+
+article ul:not(.inline-list) li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: -1.85rem;
+  top: 0.5em;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: (1rem * 0.35) 0 (1rem * 0.35) (1rem * 0.35);
+  border-color: transparent transparent transparent $secondary-color;
+}
+
+
+
+// space out links within .inline-list container
+
+.inline-list.links {
+  margin-top: (1rem * 0.5);
+}
+
+.inline-list.links li + li {
+  margin-left: (1rem * 2);
+}
+
+// make definition list links more clickable
+
+.vertical-list a {
+  left: -0.5em;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+.works .vertical-list {
+  li {
+    width: auto;
+    float: left;
+    padding-right: 1rem;
+  }
+}
+
+.vertical-list > p {
+  width: 100%;
+}
+
+// insert slash in between multiple list items
+
+.attribution li + li:before,
+.card-caption li + li:before,
+.crumb:after {
+  content:' \2f ';
+}
+
+// media pager
+.media-pager,
+.perspective-pager {
+  position: absolute;
+  bottom: 1.15em;
+  width: 100%;
+  text-align: center;
+}
+
+.pager {
+  margin-bottom: 1rem * 0.75;
+}
+
+// perspective pager prev / next controls
+.perspective-pager li + li,
+.pager li + li {
+  margin-left: 1rem;
+}
+
+ol,
+.limited-width ul {
+  padding-left: 1rem * 2;
+}
+
+ol {
+  counter-reset: list-counter;
+
+
+  li:before {
+  	content: counter(list-counter)'.';
+  	counter-increment: list-counter;
+    position: absolute;
+    left: -2rem;
+  }
+}
+
+
+
+.works .links {
+  margin-top: 2rem !important;
+}

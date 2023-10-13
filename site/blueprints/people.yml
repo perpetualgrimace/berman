@@ -1,0 +1,43 @@
+title: Directory with Visual Links
+pages: true
+  template:
+    person
+
+fields:
+  title:
+    label: 'Title:'
+    required: false
+    width: 2/3
+  approval:
+    label: Review Stage
+    type: select
+    required: false
+    width: 1/3
+    columns: 1
+    options:
+      ready: Ready for review
+      approved: Approved by Jeff
+  text:
+    label: 'Text:'
+    type: markdown
+    width: 2/3
+  quote:
+    label: 'Optional Quote:'
+    type: markdown
+    width: 1/3
+
+  cta:
+    label: CTA Heading
+    type: text
+    width: 1/2
+  CtaButton:
+    label: 'CTA Button'
+    type: text
+    width: 1/2
+  CtaLink:
+    label: 'CTA Button Link'
+    type: page
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

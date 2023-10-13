@@ -1,0 +1,17 @@
+title: Blog series
+preview: false
+files: false
+pages: false
+icon: book
+options:
+  url: false
+  status: false
+  delete: true
+
+fields:
+  title:
+    label: Series name
+  description:
+    extends: defaultText
+    label: "About this series:"
+    help: If a series description is given, it will be displayed in the sidebar of posts from this series.

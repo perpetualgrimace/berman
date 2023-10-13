@@ -1,0 +1,19 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// section padding
+.section {
+  @include section-padding;
+}
+
+
+// adjust padding for adjacent work sections
+/*
+.textblock + .video,
+.textblock + .one-pager,
+.video + .textblock,
+.booklet + .textblock {
+  padding-top: 0;
+}
+*/

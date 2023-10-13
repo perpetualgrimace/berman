@@ -1,0 +1,18 @@
+title: Quote
+preview: false
+pages: false
+icon: quote-left
+options:
+  template: false
+  url: false
+  status: false
+  delete: true
+
+fields:
+  title:
+    label: Author
+    width: 1/2
+  quoteImg: quoteImg
+  text:
+    extends: defaultText
+    label: The quote

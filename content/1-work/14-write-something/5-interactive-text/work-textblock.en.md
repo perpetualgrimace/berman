@@ -1,0 +1,1 @@
+Text: People jumped right in and stretched their creative writing muscles. Greg was introduced to an elixir of elephant tears, a box of jingle-bell bees, and even a forest-dwelling luchador.

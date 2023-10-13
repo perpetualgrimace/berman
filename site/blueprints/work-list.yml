@@ -1,0 +1,38 @@
+title: Work Directory
+icon: briefcase
+pages:
+  sortable: true
+  template: work
+options:
+  template: false
+  url: false
+
+fields:
+  title: title
+  headline: headline
+  heroImg: heroImg
+  socialImg: socialImg
+
+  featuredWork:
+    label: Home page featured work
+    type: structure
+    style: table
+    fields:
+      image:
+        label: image
+        type: image
+      client:
+        label: client name
+        required: true
+      caption:
+        label: caption
+      page:
+        label: link
+        type: select
+        options: children
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaButton: ctaButton
+  ctaLink: ctaLink

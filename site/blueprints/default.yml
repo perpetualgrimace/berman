@@ -1,0 +1,17 @@
+title: Basic Page (no sidebar)
+pages: false
+
+fields:
+  title: title
+  headline: headline
+  text: defaultText
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaButton: ctaButton
+  ctaLink: ctaLink
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

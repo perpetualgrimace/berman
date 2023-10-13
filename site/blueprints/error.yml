@@ -1,0 +1,15 @@
+title: Error
+icon: exclamation-triangle
+pages: false
+files: false
+options:
+  preview: false
+  status: false
+  template: false
+  url: false
+  delete: false
+
+fields:
+  info:
+    type: info
+    text: Old URLs should be routed to new URLs automatically. If the URL is not found at all, the user will be routed back to the home page.

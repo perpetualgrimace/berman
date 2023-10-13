@@ -1,0 +1,4 @@
+label: SVG logo
+type: image
+help: 'About 150px tall for horizontal logos. Solid white. Note: If saving from Illustrator, make sure the responsive option is left unchecked. Optimize with <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a> before uploading.'
+width: 1/3

@@ -1,0 +1,56 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// reset * + * margin on layout elements
+.g-col + .g-col,
+.g-columns + .g-columns,
+.u-fullwidth + .g-columns,
+.g-columns + .u-fullwidth {
+  margin-top: 0;
+}
+
+// scoped * + * defaults
+article,
+[class*='header'],
+.cta {
+   * + * {
+    margin-top: 0.625em;
+  }
+}
+
+article * + {
+  h2, h3, h4, h5, h6 {
+    margin-top: 2.5rem;
+  }
+}
+
+article p + p,
+article h2 + p,
+article h3 + p {
+  margin-top: 0.875em;
+}
+
+// if an article starts with a p tag, adjust the baseline
+article > p:first-child {
+  margin-top: 0.2em;
+}
+
+article p + p > .button {
+  margin-top: 0.875em - 0.625em; // 0.25em
+}
+
+
+// add anchor link offset to any element with an id; fudged
+main [id]:before {
+  @include pseudo;
+  visibility: hidden;
+  margin-top: -($gutter * 1.25);
+  height: $gutter * 1.25;
+
+  // account for fixed nav
+  @media (min-width: $m3) and (min-height: $sm2) {
+    margin-top: -($gutter * 4.25);
+    height: $gutter * 4.25;
+  }
+}

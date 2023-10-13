@@ -1,0 +1,13 @@
+title: Background Image
+pages: false
+preview: parent
+icon: picture-o
+files:
+  width: 1920
+options:
+  url: false
+
+fields:
+  title:
+    label: Section title
+  image: backgroundImg

@@ -1,0 +1,129 @@
+/* MODEL
+
+div.work-booklet-section
+__ div.g-columns.u-vertical-center
+____ article.booklet-caption.g-col.g-4
+____ div.booklet-container.g-col.g-8
+______ div.bx-wrapper (max-width: 100%, margin: 0 auto)
+________ div.bx-viewport (width: 100%, overflow: hidden, pos:rel, height:dynamic)
+__________ ul.booklet-list (width:auto, pos:rel)
+____________ li.booklet-item (float: none, pos:ab, width:dynamic, z-index:0/50, display:block/none)
+______________ a.booklet-link
+________________ img.booklet-img
+
+*/
+
+$max-booklet-height-fallback-small: 14rem;
+$max-booklet-height-small: 50vh;
+
+$max-booklet-height-fallback: 20rem;
+$max-booklet-height: 70vh;
+
+// adjust caption positioning to account for slideshow controls
+.booklet-caption {
+  @media (min-width: $m2) {
+    top: -2rem;
+  }
+}
+
+// override overflow: hidden so edges don't get cut off during transform
+.booklet-container .bx-viewport {
+  overflow: visible !important;
+  max-height: $max-booklet-height-fallback-small;
+  max-height: $max-booklet-height-small;
+
+  @media (min-width: $m2) {
+    max-height: $max-booklet-height-fallback;
+    max-height: $max-booklet-height;
+  }
+}
+
+.booklet-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+// booklet link, perspective parent
+.booklet-link {
+  // remove line-height
+  display: block;
+  line-height: 0;
+
+  @media (min-width: $m2) {
+    @include perspective-parent;
+    // reset grid padding to remove gutter
+    padding: 0 !important;
+    // height: 24rem;
+    // max-height: 70vh;
+  }
+
+  // override default focus treatment
+  &:focus {
+    background: none;
+  }
+}
+
+// image, perspective effect
+.booklet-img {
+  @include box-shadow-lg($shadow-subtle);
+  display: inline-block !important; // overrides bx-slider.scss, allows variable width pages to stay centered
+  width: auto;
+  max-height: $max-booklet-height-fallback-small;
+  max-height: $max-booklet-height-small;
+
+  // perspective effect on larger screens
+  @media (min-width: $m2) {
+    transform: rotateY(-10deg);
+    max-height: $max-booklet-height-fallback;
+    max-height: $max-booklet-height;
+  }
+}
+
+// interactions
+.booklet-link:hover .booklet-img,
+.booklet-link:focus .booklet-img {
+  @include box-shadow-xl;
+
+  @media (min-width: $m2) {
+    transform: translate(0, -1%);
+  }
+}
+
+// custom pager
+.booklet-nextprev-list {
+  width: 100%;
+  text-align: center;
+
+  // grid override; increase specificity
+  &.g-columns {
+    margin: 0;
+  }
+
+  //
+  @media (max-width: $m2 - 0.001) {
+    margin-top: -2.5rem !important;
+  }
+}
+
+.booklet-nextprev-item + .booklet-nextprev-item {
+  margin-left: $gutter * 0.25;
+
+  @media (min-width: $m2) {
+    margin-left: $gutter;
+  }
+}
+
+// nextprev link
+.booklet-nextprev-item > a[class*='bx-'] {
+  // set to block in order to position pseudo element
+  display: block;
+  // background: blue; // debugging
+  border-radius: 50%;
+  // position within nextprev-item
+  top: 0;
+  left: 0;
+  // match the height of the :before image
+  width: 42px;
+  height: 42px;
+}

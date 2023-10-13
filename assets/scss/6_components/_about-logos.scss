@@ -1,0 +1,27 @@
+////////////////////////////////
+// container o' logos
+////////////////////////////////
+
+.logo-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.logo-img {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.25rem 1.5rem;
+  width: 30%;
+  max-height: 3.5rem;
+
+  @media (min-width: $sm2) {
+    width: 24%;
+  }
+
+  @media (min-width: $m2) {
+    width: 15%;
+    max-height: 4rem;
+  }
+}

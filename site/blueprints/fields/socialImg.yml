@@ -1,0 +1,4 @@
+label: Social image
+type: image
+help: 'Recommended size: 1200px × 672px. If none is supplied the hero image will be used.'
+width: 1/2

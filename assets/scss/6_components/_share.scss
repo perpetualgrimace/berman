@@ -1,0 +1,32 @@
+// link positioning
+.share-link {
+  display: inline-block;
+  padding: 0.5em;
+  line-height: 0.1px;
+  text-align: center;
+
+  // twitter
+  &[href*='twitter'] {
+    right: -1px;
+  }
+  // linkedin
+  &[href*='linkedin'] {
+    left: 2px;
+  }
+
+  // hover style
+  &:hover, &:focus {
+    transform: scale(1.2);
+    background: none;
+  }
+  // click!
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// svg style
+.share-link svg {
+  height: 1.45rem;
+  width: auto;
+}

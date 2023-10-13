@@ -1,0 +1,98 @@
+/* MODEL
+
+article.one-pager.section
+__ div.g-columns.u-vertical-center
+____ div.one-pager-caption.g-col.g-4
+____ div.one-pager-container.g-col.g-8
+______ a.one-pager-link
+________img.one-pager-img
+
+*/
+
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// container
+.one-pager-container {
+  // reset grid padding to avoid unnecessarily triggering hover state
+  padding: 0 !important;
+
+  // adjust the grid on larger viewports
+  @media (min-width: $m2) {
+    @include flex-vertical-center;
+    margin: $gutter * 2 !important; // add extra space around the one-pagers
+  }
+}
+
+
+// link
+.one-pager-link {
+  @media (min-width: $m2) {
+    @include perspective-parent;
+    // reset grid padding to remove gutter
+    padding: 0 !important;
+  }
+}
+
+// set descending z-index for links
+@for $i from 1 through 3 {
+  .one-pager-link:nth-of-type(#{$i}) {
+    z-index: 3 - $i;
+  }
+}
+
+
+// caption
+/*
+.one-pager-caption {
+  @media (max-width: $m2 - 0.001) {
+    top: -1rem;
+    margin-top: -1rem;
+  }
+}
+*/
+
+
+// img
+.one-pager-img {
+  @include box-shadow;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  @media (min-width: $m2) {
+    transform: rotateY(-15deg) scale(1.125);
+  }
+}
+
+
+// hover
+.one-pager-link:hover,
+.one-pager-link:focus {
+  z-index: 4;
+
+  .one-pager-img {
+    @include box-shadow-xl;
+    transform: translateY(-2px) scale(1.125);
+    opacity: 1;
+
+    @media (min-width: $m2) {
+      transform: translateY(-10px) scale(1.25);
+    }
+  }
+}
+
+.mfp-bg .one-pager-img {
+  opacity: 0.1;
+}
+
+
+// exceptions
+/*
+@media (min-width: $m2) {
+  body.half-half-half-half-half-marathon [data-js="one-pager-1"] > .one-pager-link:first-of-type {
+    left: 2rem;
+  }
+}
+*/

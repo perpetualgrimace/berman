@@ -1,0 +1,10 @@
+label: Slides
+type: structure
+required: true
+style: table
+fields:
+  slide:
+    label: slide
+    type: image
+    default: youtube
+    required: true

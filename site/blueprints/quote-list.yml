@@ -1,0 +1,15 @@
+title: Quotes
+icon: quote-left
+files: false
+options:
+  template: false
+  url: false
+  preview: false
+  status: false
+pages:
+  template: quote
+
+fields:
+  help:
+    type: info
+    text: Hi. You can manage quotes here just like normal pages. Once added, a quote can be used throughout the site.

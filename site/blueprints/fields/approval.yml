@@ -1,0 +1,8 @@
+label: Review Stage
+type: select
+required: false
+width: 1/3
+columns: 1
+options:
+  ready: Ready for review
+  approved: Approved by Jeff

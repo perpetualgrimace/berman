@@ -1,0 +1,27 @@
+title: Blog Directory
+icon: pencil
+options:
+  template: false
+  url: false
+pages:
+  sort: flip
+  sortable: true
+  template: blog-group
+
+fields:
+  title: title
+  headline:
+    extends: headline
+    label: 'Blog title:'
+  heroImg:
+    extends: heroImg
+    label: Default blog hero image
+  berman140Thumb:
+    extends: blogThumb
+    label: Default Berman140 thumbnail
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaButton: ctaButton
+  ctaLink: ctaLink

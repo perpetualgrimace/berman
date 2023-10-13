@@ -1,0 +1,6 @@
+label: Hashtag
+type: tags
+help: Used when the article is shared on twitter
+required: false
+limit: 1
+width: 1/2

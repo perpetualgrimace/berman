@@ -1,0 +1,5 @@
+label: Quote
+type: select
+options: query
+query:
+  page: quotes

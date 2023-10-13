@@ -1,0 +1,1 @@
+Text: We created an icon style that makes an advanced technology easy to understand. By using graphics to communicate how Senaya's platform works and what it can tell customers about the status of their assets, we convey the powerful simplicity of Senaya's technology compared to other supply chain management tools.

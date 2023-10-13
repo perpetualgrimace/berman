@@ -1,0 +1,202 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// default type
+html {
+  @include lato;
+}
+
+// bold type
+strong, b, a,
+button, input[type='button'], label {
+  @include lato-bold;
+}
+
+// italic type
+em, i {
+  @include lato-italic;
+}
+
+// links
+a {
+  text-decoration: none;
+}
+
+// heading type
+.heading {
+  @include utopia;
+  text-transform: uppercase;
+  letter-spacing: 0.25em; // fallback
+  letter-spacing: calc(0.2em + 2px); // variable letter-spacing, see http://codepen.io/jamesferrell/pen/EgZrVJ
+}
+
+// display type
+// note: in main, must be added explicitely via class, so it overwrites heading defaults
+.display,
+svg text,
+h1, h2, h3, h4, h5, h6 {
+  @include utopia-italic;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+
+// type size defaults
+h1 {
+  font-size: $beta;
+
+  @media (min-width: $m2) {
+    font-size: $alpha;
+  }
+}
+
+h2 {
+  font-size: #{ ($beta + $delta) / 2 };
+
+  @media (min-width: $sm2) {
+    font-size: $beta;
+  }
+}
+
+h3 {
+  font-size: $gamma;
+
+  @media (min-width: $sm2) {
+    font-size: #{ ($beta + $delta) / 2 };
+  }
+}
+
+p, li    { font-size: $gamma; }
+h4, h5, h6   { font-size: $delta; }
+
+small,
+label,
+dd * {
+  font-size: $epsilon;
+
+  @media (min-width: $m2) {
+    font-size: $milli;
+  }
+}
+
+code {
+  font-size: 0.75em;
+}
+
+
+// type size overrides
+.giga {
+  font-size: $alpha;
+
+  @media (min-width: $m1) {
+    font-size: 6.5vw;
+  }
+  @media (min-width: $m3) {
+    font-size: $giga;
+  }
+}
+.alpha {
+  font-size: $beta;
+
+  @media (min-width: $m2) {
+    font-size: $alpha;
+  }
+}
+.beta  {
+  font-size: $beta;
+}
+.gamma,
+.gamma p,
+.gamma li {
+  font-size: $gamma;
+}
+.delta,
+.delta p,
+.delta li {
+  font-size: $delta;
+}
+.milli,
+.milli p,
+.milli li  {
+  font-size: $epsilon;
+
+  @media (min-width: $m2) {
+    font-size: $milli;
+  }
+}
+
+
+// default line-height
+main * {
+  line-height: 1.5;
+}
+
+// heading line-height
+h1, h2, h3, h4, h5, h6,
+.heading, .display {
+  line-height: 1;
+}
+
+
+////////////////////////////////
+// legacy
+////////////////////////////////
+
+// Line breaks
+br {
+  display: none;
+  line-height: 0;
+}
+
+footer br,
+table br,
+blockquote br,
+.vertical-list br {
+  display: block; // always be breaking
+}
+
+br + br {
+  display: none; // in case consecutive <br> tags sneak onto a page, hide all but the first
+}
+
+header br {
+  @media (min-width: $m1) {
+    display: block;
+  }
+}
+
+.services-container br {
+  @media (min-width: $m2) {
+    display: block;
+  }
+}
+
+
+
+
+// table
+table {
+  margin: 1.5rem auto;
+
+  th {
+    vertical-align: bottom;
+  }
+
+  th, td {
+    padding: 0.25rem 0;
+    max-width: 50%;
+  }
+  th + th,
+  td + td {
+    padding-left: 1rem;
+  }
+}
+
+.table-2col {
+  th, td {
+    &:nth-of-type(2) {
+      text-align: center;
+    }
+  }
+}

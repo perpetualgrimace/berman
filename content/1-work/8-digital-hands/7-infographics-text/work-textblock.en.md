@@ -1,0 +1,1 @@
+Text: Playing on the special ops feel of the GSOC web site, these infographics highlight what sets Digital Hands apart, utilizing the night-vision look established for the high-level operations team.

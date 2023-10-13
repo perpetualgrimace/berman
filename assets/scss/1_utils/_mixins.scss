@@ -1,0 +1,293 @@
+////////////////////////////////
+// typography
+////////////////////////////////
+
+// body fonts
+@mixin lato {
+  font-family: "lato", Lato, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+@mixin lato-italic {
+  font-family: "lato", Lato, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+@mixin lato-bold {
+  font-family: "lato", Lato, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+// heading fonts
+@mixin utopia {
+  font-family: "utopia-std", Utopia, georgia, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin utopia-italic {
+  font-family: "utopia-std", Utopia, georgia, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+// font smoothing
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+////////////////////////////////
+// layout & positioning
+////////////////////////////////
+
+// Grid mixin. Adapted from http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
+@mixin grid($numPerRow, $marginRight, $marginBottom) {
+  width: ((100% - (($numPerRow - 1) * $marginRight)) / $numPerRow);
+  margin-right: $marginRight;
+  box-sizing: border-box;
+
+  &:nth-child(n) {
+    margin-right: $marginRight;
+    margin-bottom: $marginBottom;
+    float: left;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    float: right;
+  }
+  &:nth-last-of-type(-n+#{$numPerRow}) {
+    margin-bottom: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+// break out of container and be full width
+@mixin fullwidth {
+  margin-left: auto; // fallbacks
+  margin-right: auto;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+@mixin section-padding {
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+  padding-top: calc(#{$gutter / 2} + 2vw);
+  padding-bottom: calc(#{$gutter / 2} + 2vw);
+}
+
+// Psuedo elements
+@mixin pseudo {
+  content: '';
+  display: block;
+}
+
+// Fill up an absolutely 100% amount of space
+@mixin inflate {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// vertically center exactly one child element via flexbox
+@mixin flex-vertical-center {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+// Centered elements, the dumb but sometimes useful way
+@mixin absolute-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin vertical-center {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@mixin horizontal-center {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+// Good ol' clearfix
+@mixin clearfix {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+// No wiggle
+@mixin no-wiggle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+// Auto-ellipsis
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+////////////////////////////////
+// background images
+////////////////////////////////
+
+// hidpi mixin, somewhat inspired by responsive.scss.
+@mixin hidpi($multiplier: 1.5) {
+  @media (min-device-pixel-ratio: $multiplier), (min-resolution: (96dpi * $multiplier)) {
+    @content;
+  }
+}
+
+// Svg background with fallback and retina support
+@mixin svg($filename, $path : "img/") {
+  background-image: url(../../#{$path}#{$filename}.png);
+  background-image:
+    linear-gradient(transparent, transparent),
+    url(../../#{$path}#{$filename}.svg);
+}
+
+// Repeating patterns
+@mixin pattern($filename: pattern, $extension: png) {
+  background-image: url(../../img/backgrounds/#{$filename}.#{$extension});
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: -20% 0;
+
+  @include hidpi {
+    background-image: url(../../img/backgrounds/#{$filename}@2x.#{$extension});
+  }
+}
+
+
+////////////////////////////////
+// shadow
+////////////////////////////////
+
+// box shadow
+@mixin box-shadow($shadow-color: $shadow) {
+  box-shadow: 0 1px 0.25em $shadow-color;
+}
+@mixin box-shadow-lg($shadow-color: $shadow) {
+  box-shadow: 0 1px 0.5em $shadow-color;
+}
+@mixin box-shadow-xl($shadow-color: $shadow) {
+  box-shadow: 0 1px 1em $shadow-color;
+}
+@mixin box-shadow-focus($shadow-color: rgba($brand-color, 0.5)) {
+  box-shadow: 0 0 0.25em $shadow-color;
+}
+
+// text shadow
+@mixin text-shadow($shadow-color: $shadow) {
+  text-shadow: 0 1px 0.25em $shadow-color;
+}
+
+
+////////////////////////////////
+// perspective
+////////////////////////////////
+
+@mixin perspective-parent($perspective: 600) {
+  display: block;
+  /* autoprefixer: off */
+  -webkit-perspective: $perspective;
+  /* autoprefixer: on */
+  perspective: $perspective;
+}
+
+
+////////////////////////////////
+// nav / dropdown-menu
+////////////////////////////////
+
+// dropdown mixins for hidden and visible states
+@mixin dropdown-hidden {
+  position: absolute;
+  width: auto;
+  transform: translate(0, -1rem);
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  z-index: -100;
+}
+@mixin dropdown-visible {
+  transform: translate(0, 0);
+  opacity: 1;
+  clip: auto;
+
+  @media (max-width: $m2 - 0.001) {
+    z-index: -1;
+  }
+}
+
+
+////////////////////////////////
+// button base style
+////////////////////////////////
+
+@mixin button-base($background-color: $brand-color, $text-color: $white) {
+  @include font-smoothing;
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 0.5em 2em 0.75em; // cleanest button padding ever, amirite?
+  font-size: 1rem;
+  text-transform: lowercase;
+  text-decoration: none !important;
+  color: $text-color !important;
+  background: $background-color; // fallback
+  background-color: $background-color; // base color
+  border: $stroke-thin solid $background-color;
+  border-radius: $radius;
+}
+
+
+////////////////////////////////
+// gradient
+////////////////////////////////
+
+@mixin brand-gradient {
+  background-color: $secondary-color;
+  background-image: linear-gradient(315deg, $secondary-color 10%, $brand-color 90%);
+  transform: scale(1);
+}
+
+////////////////////////////////
+// long shadow hover effect
+////////////////////////////////
+
+@mixin fuzzy-shadow($color: $brand-color) {
+  text-shadow:
+    0 1px 1.125em rgba($color, 0.4);
+}
+
+@mixin long-shadow($color: $brand-color) {
+  text-shadow:
+    // 0 1px 1.125em rgba($color, 0.4), // awkward transition on chrome 58
+    1px 1px 0 $color,
+    2px 2px 0 $color,
+    3px 3px 0 $color;
+}
+
+@mixin longer-shadow($color: $brand-color) {
+  text-shadow:
+    // 0 1px 1.125em rgba($color, 0.4), // awkward transition on chrome 58
+    1px 1px 0 $color,
+    2px 2px 0 $color,
+    3px 3px 0 $color,
+    4px 4px 0 $color,
+    5px 5px 0 $color,
+    6px 6px 0 $color;
+}

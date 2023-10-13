@@ -1,0 +1,18 @@
+// full width, auto height
+.work-background-img {
+  width: 100%;
+  height: auto;
+}
+
+// placement and max height
+/*
+.work-background-section {
+  @include flex-vertical-center;
+  overflow: hidden;
+
+  // offset fixed nav
+  @media (min-width: $m3) and (min-height: $sm2) {
+    max-height: calc(100vh - #{$nav-height});
+  }
+}
+*/

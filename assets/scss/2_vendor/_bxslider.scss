@@ -1,0 +1,224 @@
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+
+   *zoom: 1;
+   text-align: center;
+}
+
+.bx-wrapper li {padding-left: 0; margin-left: 0;}
+
+.bx-wrapper img {
+   max-width: 100%;
+   display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+	transform: translatez(0);
+}
+
+// override inherited * + * margin
+.bx-wrapper .bx-controls,
+.bx-wrapper .bx-pager-item {
+  margin-top: 0;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+   position: absolute;
+   width: 100%;
+   bottom: 0;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+   display: none;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+   text-align: center;
+   font-size: .85em;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+   display: inline-block;
+   *zoom: 1;
+   *display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+   text-indent: -9999px;
+   display: block;
+   width: 15px;
+   height: 15px;
+   margin: 1.5em 0.5em 1.5em 0.5em;
+   outline: 0;
+   border-radius: 50%;
+   border: 2px solid $white;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+   background: $white;
+   opacity: 1;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-prev:before,
+.bx-next:before {
+  @include pseudo;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0 !important;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-shadow: 0 1px 0.25rem $shadow; // modified from @mixin box-shadow
+  // sprite
+  background-image: url(../../img/icons/nextprev-spritesheet.png);
+  background-size: 168px 42px;
+  background-position: 0 0;
+
+  @include hidpi {
+    background-image: url(../../img/icons/nextprev-spritesheet@2x.png);
+  }
+}
+
+.bx-prev {
+  left: rem(16);
+
+  // reposition on hover
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    background-position: 126px 0;
+  }
+}
+
+.bx-next {
+  right: rem(40);
+
+  &:before {
+    background-position: 42px 0;
+  }
+
+  // reposition on hover
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    background-position: 84px 0;
+  }
+}
+
+
+.bx-next, .bx-prev {
+  font-size: 0.1px !important;
+  width: 1px;
+  height: 1px;
+  line-height: 0.1px;
+  top: -(rem(48)); // 100% fudged
+
+  // remove focus style on link
+  &:focus {
+    background: none;
+  }
+
+  // add shadow on hover/focus
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    box-shadow: 0 1px 0.5rem $shadow; // modified from @mixin box-shadow-lg
+  }
+
+  // scale down on smaller screens
+  &:before {
+    @media (max-width: $m2) {
+      transform: scale(0.75);
+      transform-origin: center;
+    }
+  }
+}
+
+// responsition next link on smaller screens after scaling
+@media (max-width: $m2) {
+  .bx-next {
+    right: rem(48);
+  }
+}
+
+.bx-wrapper .bx-controls-direction a {
+   position: absolute;
+   top: 50%;
+   margin-top: -16px;
+   outline: 0;
+   text-indent: -9999px;
+   z-index: 1;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+   display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+   text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+   background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+   text-align: left;
+   width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+   right: 0;
+   width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+}
+
+.bx-wrapper .bx-caption span {
+}

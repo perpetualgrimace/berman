@@ -1,0 +1,246 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// hide multiple slides in browsers without js
+.no-js [class*='slider'] > li + li {
+  display: none;
+}
+
+
+////////////////////////////////
+// legacy
+////////////////////////////////
+
+/*
+
+.bx-viewport {
+  height: auto !important; //override the plugin's inline style
+}
+
+// container if no-js
+
+.slider,
+.hero {
+
+   @media (min-width: $m3) {
+      padding-top: 0;
+      padding-bottom: 0;
+      }
+   }
+
+
+.slider {
+   height: auto;
+   overflow: hidden;
+
+   li {
+      margin-top: 0;
+      height: auto;
+      }
+   }
+
+// work sections
+
+.work-background {
+
+      @media (min-width: $m3) {
+
+         .bx-wrapper {
+            max-width: 100% !important;   // override bx-slider inline style
+            }
+         }
+      }
+
+// perspective slider
+
+.perspective {
+
+  .bx-viewport {
+    height: 100% !important;
+  }
+
+   .bx-wrapper {
+
+      @media (min-width: $m3) {
+
+         width: 66%;
+         float: right;
+         right: 0;
+
+         height: 100%;
+         display: block;
+         }
+      }
+
+   }
+
+
+.no-js .perspective .work-perspective {
+   height: 100% !important;
+   padding-bottom: 0;
+
+   @media (min-width: $m3) {
+      left: 35%;
+      position: absolute;
+      }
+
+   li:nth-of-type(n+2) {
+      display: none;
+      }
+
+   }
+
+.centered-image,
+.perspective,
+.video-slider {
+
+// remove pager
+
+   .bx-pager {
+      display: none;
+      }
+
+   }
+
+.centered-image {
+   text-align: center;
+
+   img {
+      max-width: 95%;
+      }
+
+   @media (min-width: $m3) {
+
+      .bx-wrapper {
+         height: 100%;
+
+         li {
+            @include vertical-center;
+            }
+
+         img {
+            max-height: 100%;
+            width: auto;
+            padding-bottom: 1rem * 2;
+            }
+         }
+      }
+
+   img {
+      margin: 0 auto;
+      }
+
+   }
+
+.video-slider {
+   text-align: center;
+
+   .work-figure {
+      max-width: 100%;
+      margin: 0 auto;
+      }
+
+   @media (min-width: $m1) {
+
+      .bx-wrapper {
+         height: 100%;
+
+         .work-figure {
+            width: auto;
+            max-width: 85%;
+            margin: 0 auto;
+
+            @media (min-width: $m1) {
+               width: 60%;
+               max-width: 1200px;
+               margin-top: 1rem * 3;
+               }
+            }
+
+         }
+      }
+
+   }
+
+
+.perspective,
+.perspective .bx-wrapper,
+.perspective .bx-viewport {
+   overflow: visible !important;
+   }
+
+
+// Method
+
+.fixed-height {
+  @media (min-width: $m3) {
+
+    .bx-wrapper:last-of-type {
+      &,
+      .bx-viewport,
+      .slider-method,
+      li, .row {
+        height: 100% !important; //override the override for the plugin's inline style
+
+        .vertical-center {
+          @include vertical-center;
+        }
+      }
+    }
+  }
+}
+
+
+// slider controls
+
+.custom-controls .bx-controls {
+   display: none;
+   }
+
+.bx-controls-direction {
+   .bx-prev,
+   .bx-next {
+      top: 46% !important;
+
+      &:after {
+         display: block;
+         color: $white;
+         padding: 0 1rem 1rem 1rem;
+         font-size: 1rem * 2;
+         z-index: 2;
+         text-indent: 0;
+         }
+      }
+
+   .bx-prev:after {
+      content: '◀︎';
+      }
+
+   .bx-next:after {
+      content: '▶︎';
+      }
+   }
+
+
+   .no-js .slider {
+     width: 85%;
+     position: absolute;
+     top: 0;
+     text-align: center;
+     max-height: 1rem * 36;
+
+     li {
+       padding-bottom: 1rem * 14;
+
+       &:nth-of-type(n+2) {
+         display: none;
+       }
+     }
+     .img {
+       background-size: cover;
+       height: 1rem * 36;
+     }
+   }
+
+ */

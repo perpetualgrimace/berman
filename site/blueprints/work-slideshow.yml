@@ -1,0 +1,13 @@
+title: Slideshow
+pages: false
+preview: parent
+icon: exchange
+options:
+  url: false
+
+fields:
+  title:
+    extends: title
+    label: section title
+    width: 1
+  slides: slides

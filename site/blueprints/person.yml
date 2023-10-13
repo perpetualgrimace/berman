@@ -1,0 +1,58 @@
+title: Person
+pages: false
+
+fields:
+  title:
+    label: 'Full Name:'
+    required: false
+    width: 1/2
+  position:
+    label: 'Job Title:'
+    type: text
+    width: 1/2
+  firstname:
+    label: 'First Name:'
+    width: 1/4
+  lastname:
+    label: 'Last Name:'
+    width: 1/4
+  sex:
+    label: 'Gender:'
+    type: select
+    width: 1/4
+    options:
+      male: male
+      female: female
+  approval:
+    label: Review Stage
+    type: select
+    required: false
+    width: 1/4
+    columns: 1
+    options:
+      ready: Ready for review
+      approved: Approved by Jeff
+  text:
+    label: 'Bio:'
+    type: markdown
+  twitter:
+    label: 'Twitter Handle'
+    type: text
+    width: 1/2
+  facebook:
+    label: 'Facebook User Slug'
+    type: text
+    width: 1/2
+  info:
+    type: info
+    text: >
+
+      <h2>Required Images:</h2>
+
+      <li><b>person.jpg</b> <small>(490px × 490px)</small></li>
+
+      All images should be optimized at <a href="http://tinypng.org" target="_blank">tinypng.org</a> before uploading.
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions

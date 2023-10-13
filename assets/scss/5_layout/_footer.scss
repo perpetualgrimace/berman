@@ -1,0 +1,176 @@
+////////////////////////////////
+// footer base
+////////////////////////////////
+
+.footer {
+  z-index: 1;
+
+  @media (min-width: $m2) {
+    padding-top: 2rem;
+  }
+}
+
+// footer links
+.footer-link {
+  @include font-smoothing;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: $milli;
+
+  // interactions
+  &.is-active-pg {
+    &,
+    &:hover,
+    &:focus {
+      color: $light-2;
+    }
+  }
+}
+
+.footer .g-col {
+  @media (min-width: 35em) {
+    text-align: center;
+    padding-bottom: 1.625rem;
+  }
+}
+
+
+////////////////////////////////
+// nav & contact info container
+////////////////////////////////
+
+// align lists by bottom (theoretically)
+.footer-nav-contact-container {
+  @media (min-width: $m2) {
+    display: flex;
+    align-items: flex-end;
+
+    // divider
+    &:after {
+      @include pseudo;
+      @include horizontal-center;
+      position: absolute;
+      height: 100%;
+      width: $stroke-width;
+      background: $white;
+    }
+  }
+}
+
+
+////////////////////////////////
+// footer nav
+////////////////////////////////
+
+// logo
+.footer-nav-logo {
+  display: block;
+  padding: ($gutter * 0.7) $gutter;
+
+  // svg positioning
+  svg, image {
+    width: 6.9rem;
+    height: auto;
+  }
+
+  // interactions
+  &:hover path,
+  &:focus path {
+    fill: $secondary-color;
+  }
+}
+
+// switch to inline list style when the space is available
+.footer-nav-item {
+  @media (min-width: 35em) {
+    display: inline-block;
+  }
+}
+
+
+////////////////////////////////
+// contact info
+////////////////////////////////
+
+.footer-contact-item {
+  margin-top: 1rem;
+}
+
+// svg positioning
+.footer-contact-svg {
+  display: inline-block;
+  margin-right: 0.25rem;
+  vertical-align: middle; // align with text
+  margin-top: -4px; // fudged
+}
+
+// svg interaction color
+.footer-contact-link {
+  &:hover path,
+  &:focus path,
+  &:active path {
+    fill: $secondary-color;
+  }
+}
+
+
+////////////////////////////////
+// copyright
+////////////////////////////////
+
+.footer-copyright {
+  @media (min-width: $m2) {
+    margin-top: 2rem;
+  }
+}
+
+.footer-social-link {
+  padding: 0.5rem;
+
+  &:hover path,
+  &:focus path,
+  &:active path {
+    fill: $white;
+  }
+}
+
+
+////////////////////////////////
+// smaller screens
+////////////////////////////////
+
+@media (max-width: 35em - 0.001) {
+
+  .footer-nav-link {
+    display: block;
+    padding-left: 0;
+  }
+
+  .footer-nav-item + .footer-nav-item {
+    border-top: 1px solid $gray;
+  }
+
+  // offset grid
+  .footer-nav-logo {
+    left: -1rem;
+  }
+
+  // visually flip and position social list and copyright text
+  @supports (flex-wrap: wrap) or (-webkit-flex: wrap) {
+    .footer-copyright {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .footer-copyright-text {
+      order: 1;
+    }
+    .footer-social-list {
+      top: -2rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-social-item:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
+  }
+}

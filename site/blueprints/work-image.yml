@@ -1,0 +1,18 @@
+title: Image + caption
+pages: false
+preview: parent
+icon: file-image-o
+options:
+  url: false
+
+fields:
+  title:
+    extends: title
+    label: Section title
+
+  text:
+    extends: defaultText
+    toolbar: false
+    label: Caption
+    width: 2/3
+  img: workImg

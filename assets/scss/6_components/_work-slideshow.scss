@@ -1,0 +1,18 @@
+// limit slideshow height
+.work-slideshow-section .bx-pager {
+  background-image: linear-gradient(to top, $shadow, rgba($black, 0));
+}
+/*
+@supports (display: flex) or (-webkit-display: flex) {
+  .work-slideshow-section {
+    @include flex-vertical-center;
+    max-height: 100vh;
+    overflow: hidden;
+
+    // offset fixed nav
+    @media (min-width: $m3) and (min-height: $sm2) {
+      max-height: calc(100vh - #{$nav-height});
+    }
+  }
+}
+*/

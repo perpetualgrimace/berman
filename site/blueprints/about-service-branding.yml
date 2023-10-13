@@ -1,0 +1,50 @@
+title: Sibling
+pages: false
+
+fields:
+  title:
+    label: 'Title:'
+    required: false
+  caption:
+    label: 'Caption:'
+    required: false
+    help: Used by the parent page in some templates
+  text:
+    label: 'Text:'
+    type: markdown
+    width: 2/3
+  sidebarTitle:
+    label: Sidebar Title
+    type: text
+    width: 1/3
+  col1:
+    label: left column (optional)
+    type: markdown
+    width: 1/2
+  col2:
+    label: right column (optional)
+    type: markdown
+    width: 1/2
+  logos:
+    label: 'Logo Intro:'
+    type: markdown
+  branding_services:
+    label: 'Branding Services Intro:'
+    type: markdown
+  col3:
+    label: left column (optional)
+    type: markdown
+    width: 1/2
+  col4:
+    label: right column (optional)
+    type: markdown
+    width: 1/2
+
+  ctaLine: ctaLine
+  cta: cta
+  ctaButton: ctaButton
+  ctaLink: ctaLink
+
+  # revisionsLine: revisionsLine
+  # revisionsToggle: revisionsToggle
+  # revisions: revisions
