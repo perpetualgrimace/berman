@@ -1,4 +1,4 @@
-<?
+<?php
 
 // the next page will be the next project,
 // unless there are no older projects, in which case it will be the latest project
@@ -43,11 +43,11 @@ if ($next->nextImg() != '') {
    </a>
 
    <!-- background image -->
-   <? if($nextImg != NULL): ?>
+   <?php if($nextImg != NULL): ?>
      <div class="next-img u-margin-top-off" data-bg-src="<?= $nextImg->url() ?>"></div>
      <noscript>
         <div class="next-img u-margin-top-off" style="background-image: url(<?= $nextImg->url() ?>);"></div>
      </noscript>
-   <? endif ?>
+   <?php endif ?>
 
 </section>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 // look for page-specific cta, and grab the site-wide cta if none is provided
 if($page->cta() != '') {
@@ -21,9 +21,9 @@ if($page->cta() != '') {
 
       <h2 class="cta-title display"><?= $cta ?></h2>
 
-      <? if ($ctaText != ''): ?>
+      <?php if ($ctaText != ''): ?>
         <p class="cta-text"><?= $ctaText ?></p>
-      <? endif ?>
+      <?php endif ?>
 
       <a href="<?= $ctaLink ?>" class="button cta-button"><?= $ctaButtonText ?></a>
 

@@ -1,1 +1,1 @@
-<? snippet('work-video') ?>
+<?php snippet('work-video') ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 l::set('uniform-filled-potty', 'Es wurde das Feld ausgefüllt, das leer bleiben sollte. Falls Sie kein Spam-Bot sind, versuchen Sie es bitte erneut ohne das Feld auszufüllen.');
 l::set('uniform-fields-required', 'Bitte füllen Sie alle benötigten Felder aus.');

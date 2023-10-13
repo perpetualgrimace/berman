@@ -1,4 +1,4 @@
-<?
+<?php
 
 // if a source is specified, pull that one
 if(isset($source) && $source != '') {
@@ -29,11 +29,11 @@ if($quote->quoteImg() != '') {
       </div>
     </div>
 
-  <? if ($quoteImg != NULL): ?>
+  <?php if ($quoteImg != NULL): ?>
     <div class="quote-img u-margin-top-off" data-bg-src="<?= $quoteImg ?>"></div>
     <noscript>
       <div class="quote-img u-margin-top-off" style="background-image: url(<?= $quoteImg ?>)"></div>
     </noscript>
-  <? endif ?>
+  <?php endif ?>
 
 </div>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get contact info
 $phone = $pages->find('contact')->phone();

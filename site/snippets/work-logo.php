@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for svg logo first
 if ($section->image($section->logoImgSvg()) || $section->image('logo.svg')) {
@@ -38,19 +38,19 @@ if ($section->image($section->logoImgSvg()) || $section->image('logo.svg')) {
    <div class="g-columns">
      <div class="work-logo-container g-col g-10 u-margins-auto">
 
-     <? if($mainLogo != NULL): ?>
+     <?php if($mainLogo != NULL): ?>
 
          <img class="work-logo-img" src="<?= $mainLogo->url() ?>"
-           <? if($fallbackLogo != NULL): ?>
+           <?php if($fallbackLogo != NULL): ?>
              onerror="this.src=<?= $fallbackLogo->url() ?>"
-           <? endif ?>
+           <?php endif ?>
          alt="" draggable="false"><span class="u-screenreader"><?= $section->title() ?></span>
 
-     <? else: ?>
+     <?php else: ?>
 
        <h3 class="work-headline display">Error: no logo selected</h3>
 
-     <? endif ?>
+     <?php endif ?>
 
       <div class="work-logo-caption delta"><?= kirbytext($section->text()) ?></div>
 

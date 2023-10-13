@@ -1,4 +1,4 @@
-<?
+<?php
 
 l::set('uniform-filled-potty', 'Le champ du formulaire supposé être vide a été renseigné. Dans le cas où vous ne seriez pas un robot spammeur, merci de ré-essayer en laissant ce champ vide.');
 l::set('uniform-fields-required', 'Merci de renseigner les champs obligatoires.');

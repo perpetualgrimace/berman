@@ -7,12 +7,12 @@
 
       <!-- navigation -->
       <div class="footer-nav g-col g-6 milli">
-        <? snippet('global-footer-nav') ?>
+        <?php snippet('global-footer-nav') ?>
       </div>
 
       <!-- contact -->
       <div class="footer-contact g-col g-6 milli u-center">
-        <? snippet('global-footer-contact') ?>
+        <?php snippet('global-footer-contact') ?>
       </div>
 
     </div>
@@ -20,14 +20,14 @@
 
       <!-- copyright -->
       <div class="footer-copyright g-col milli u-center">
-        <? snippet('global-footer-copyright-social') ?>
+        <?php snippet('global-footer-copyright-social') ?>
       </div>
 
     </div>
   </div>
 </footer>
 
-<? snippet('global-footer-scripts') ?>
+<?php snippet('global-footer-scripts') ?>
 
 </body>
 </html>

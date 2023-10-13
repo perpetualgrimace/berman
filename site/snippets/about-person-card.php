@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get main img
 if($person->image('person.jpg')) {
@@ -18,13 +18,13 @@ if($person->image('person_hover.jpg')) {
 
 ?>
 
-  <div class="card<? if ($person->num() == 1) { echo ' u-margin-top-lg'; } ?>">
+  <div class="card<?php if ($person->num() == 1) { echo ' u-margin-top-lg'; } ?>">
 
     <a href="<?= $person->url() ?>" class="card-thumb person-card-thumb u-margin-top-off-children" tabindex="-1">
       <img class="card-img" src="<?= $personImg ?>" alt="" draggable="false">
-      <? if ($personHover != NULL): ?>
+      <?php if ($personHover != NULL): ?>
         <img class="card-img card-img-hover" src="<?= $personHover ?>" alt="" draggable="false">
-      <? endif ?>
+      <?php endif ?>
     </a>
 
     <div class="card-caption">

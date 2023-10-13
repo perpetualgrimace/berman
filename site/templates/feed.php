@@ -1,4 +1,4 @@
-<?
+<?php
 
     $items = $pages->find('blog')->children()->not('series')->flip()->children()->limit(10);
 

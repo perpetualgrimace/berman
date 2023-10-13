@@ -1,4 +1,4 @@
-<?
+<?php
 
 // for convenience
 $siteTitle     = $site->title();
@@ -85,59 +85,59 @@ if ($authorCount == 1 && $page->template() != 'blog-berman140') {
 
 <!-- Google Plus -->
 <meta itemprop="name" content="<?= $pageTitle ?>">
-<? if ($shareDescription != NULL): ?>
+<?php if ($shareDescription != NULL): ?>
   <meta itemprop="description" content="<?= $shareDescription ?>">
-<? endif ?>
-<? if ($img != NULL): ?>
+<?php endif ?>
+<?php if ($img != NULL): ?>
   <meta itemprop="image" content="<?= $img->url() ?>">
-<? endif ?>
+<?php endif ?>
 
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="<?= $twitterHandle ?>">
 <meta name="twitter:title" content="<?= $pageTitle ?>">
-<? if ($shareDescription != NULL): ?>
+<?php if ($shareDescription != NULL): ?>
   <meta name="twitter:description" content="<?= $shareDescription ?>">
-<? endif ?>
-<? if ($img != NULL): ?>
+<?php endif ?>
+<?php if ($img != NULL): ?>
   <meta name="twitter:image:src" content="<?= $img->url() ?>">
-<? endif ?>
+<?php endif ?>
 <meta name="twitter:player" content="">
 
 
 <!-- Open Graph General (Facebook & Pinterest) -->
 <meta property="og:url" content="<?= $pageUrl ?>">
 <meta property="og:title" content="<?= $pageTitle ?>">
-<? if ($shareDescription != NULL): ?>
+<?php if ($shareDescription != NULL): ?>
   <meta name="og:description" content="<?= $shareDescription ?>">
-<? endif ?>
+<?php endif ?>
 <meta property="og:site_name" content="<?= $siteTitle ?>">
 <!-- share image for LinkedIn, the special snowflake ❄️ -->
-<? if ($linkedinImg != NULL): ?>
+<?php if ($linkedinImg != NULL): ?>
   <meta property="og:image" content="<?= $linkedinImg->url() ?>">
   <meta property="og:image:width" content="180">
   <meta property="og:image:height" content="110">
-<? endif ?>
-<? if ($img != NULL): ?>
+<?php endif ?>
+<?php if ($img != NULL): ?>
   <!-- share image for everyone else -->
   <meta property="og:image" content="<?= $img->url() ?>">
   <meta property="og:image:width" content="<?= $img->width() ?>">
   <meta property="og:image:height" content="<?= $img->height() ?>">
-<? endif ?>
+<?php endif ?>
 <meta property="fb:admins" content="">
 <meta property="fb:app_id" content="">
 <meta property="og:locale" content="en_US">
 
 
 <!-- Open Graph Article (Facebook & Pinterest) -->
-<? if ($page->template() == 'blog'): ?>
+<?php if ($page->template() == 'blog'): ?>
   <meta property="og:type" content="article">
   <meta property="article:author" content="<?= $author ?>">
   <meta property="article:section" content="Advertising">
   <meta property="article:tag" content="<?= $tags ?>">
   <meta name="twitter:creator" content="<?= $twitterHandle ?>">
-<? else: ?>
+<?php else: ?>
   <meta property="og:type" content="website">
   <meta name="twitter:creator" content="<?= $twitterHandle ?>">
-<? endif ?>
+<?php endif ?>

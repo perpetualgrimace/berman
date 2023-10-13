@@ -1,4 +1,4 @@
-<?
+<?php
 
 // main menu items
 $items = $pages->visible();
@@ -6,20 +6,20 @@ $items = $pages->visible();
 ?>
 
 
-<a class="footer-nav-logo<? e( $page->isHomePage(), ' is-active-pg' ) ?>" href="<? e( $page->isHomePage(), '#main', $site->url() ) ?>">
-  <? snippet('icon-berman-logo-inverted') ?>
+<a class="footer-nav-logo<?php e( $page->isHomePage(), ' is-active-pg' ) ?>" href="<?php e( $page->isHomePage(), '#main', $site->url() ) ?>">
+  <?php snippet('icon-berman-logo-inverted') ?>
 </a>
 
 <ul class="footer-nav-list">
-  <? foreach($items as $item): ?>
+  <?php foreach($items as $item): ?>
 
     <li class="footer-nav-item">
-      <a class="footer-link footer-nav-link<? e($item->isOpen(), ' is-active-pg') ?>" <? e( ($item->slug() == $page->slug()), 'aria-describedby="current"' ) ?> href="<? e( $item->isOpen() && ( $page->slug() == $item->slug() ), '#main', $item->url() ) ?>">
+      <a class="footer-link footer-nav-link<?php e($item->isOpen(), ' is-active-pg') ?>" <?php e( ($item->slug() == $page->slug()), 'aria-describedby="current"' ) ?> href="<?php e( $item->isOpen() && ( $page->slug() == $item->slug() ), '#main', $item->url() ) ?>">
       <?= $item->uri(); if($item->uri() == 'about'): ?>
         <span class="u-screenreader"> <?= $site->title() ?></span>
-      <? endif; ?>
+      <?php endif; ?>
       </a>
     </li>
 
-    <? endforeach ?>
+    <?php endforeach ?>
 </ul>

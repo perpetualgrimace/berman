@@ -1,4 +1,4 @@
-<?
+<?php
   $people = $page->children()->visible();
   /*
   $count = $children->count();
@@ -20,9 +20,9 @@
 
       <?= kirbytext($page->text()) ?>
 
-      <? foreach($people as $person): ?>
-        <? snippet('about-person-card', ['person' => $person]) ?>
-      <? endforeach ?>
+      <?php foreach($people as $person): ?>
+        <?php snippet('about-person-card', ['person' => $person]) ?>
+      <?php endforeach ?>
 
     </article>
 

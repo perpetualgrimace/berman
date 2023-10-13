@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get all work pages
 $works = $pages->find('work')->featuredWork()->toStructure();
@@ -14,7 +14,7 @@ $works = $pages->find('work')->featuredWork()->toStructure();
 
   <!-- the grid -->
   <ul class="thumb-list home-thumb-list g-columns u-margin-top-off-children">
-    <? foreach ($works as $work) {
+    <?php foreach ($works as $work) {
       snippet('home-work-thumbnail', ['work' => $work]);
     } ?>
   </ul>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 // First, check for screenshots field.
 if ($section->screenshots() != '') {
@@ -34,7 +34,7 @@ $count = $images->count();
 <div class="work-screenshot-section section u-fullwidth <?= $sectionBg; /* if there are more than 2 screenshots, display them inline with horizontal overflow on smaller screens */ e($count > 2, ' work-screenshots-inline') ?>">
   <ul class="screenshot-list g-columns g-doubling u-margin-top-off-children">
 
-    <? foreach($images as $image):
+    <?php foreach($images as $image):
       // if using the slides field, use the image function and get a valid url
       if ($section->screenshots() != '') {
         $imgUrl = $section->image($image->screenshot())->url();
@@ -46,14 +46,14 @@ $count = $images->count();
     ?>
 
       <li class="screenshot-item g-col <?= $gridClass ?>">
-        <? if ($image->link() != ''): ?><a class="screenshot-link" href="<?= $image->link() ?>"><? endif ?>
+        <?php if ($image->link() != ''): ?><a class="screenshot-link" href="<?= $image->link() ?>"><?php endif ?>
         <img class="screenshot-img" data-src="<?= $imgUrl ?>" alt="" draggable="false">
         <noscript>
           <img class="screenshot-img" src="<?= $imgUrl ?>" alt="" draggable="false">
         </noscript>
-        <? if ($image->link() != ''): ?></a><? endif ?>
+        <?php if ($image->link() != ''): ?></a><?php endif ?>
       </li>
 
-    <? endforeach ?>
+    <?php endforeach ?>
   </ul>
 </div>

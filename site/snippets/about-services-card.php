@@ -6,7 +6,7 @@
 
       <div class="card-caption">
         <h3><?= $service->title() ?></h3>
-        <p><? e($service->caption(), $service->caption()) ?></p>
+        <p><?php e($service->caption(), $service->caption()) ?></p>
       </div>
 
    </a>

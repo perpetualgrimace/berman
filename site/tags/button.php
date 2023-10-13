@@ -1,4 +1,4 @@
-<?
+<?php
 
 kirbytext::$tags['button'] = array(
   'attr' => array(

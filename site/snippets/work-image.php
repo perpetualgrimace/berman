@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for specified image
 if ($section->img() != '') {
@@ -25,12 +25,12 @@ if ($section->img() != '') {
     <!-- image -->
     <div class="work-image-container g-col g-6">
 
-      <? if($img != NULL): ?>
+      <?php if($img != NULL): ?>
         <img class="work-image-img" data-src="<?= $img->url() ?>" alt="" draggable="false">
         <noscript>
           <img class="work-image-img" src="<?= $img->url() ?>" alt="" draggable="false">
         </noscript>
-      <? endif ?>
+      <?php endif ?>
 
     </div>
 

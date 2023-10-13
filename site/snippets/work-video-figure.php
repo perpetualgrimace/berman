@@ -1,4 +1,4 @@
-<?
+<?php
 
 if ($video->platform() == 'youtube') {
   $embedPath = '//youtube.com/embed/';

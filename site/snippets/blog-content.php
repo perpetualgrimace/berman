@@ -1,16 +1,16 @@
 <section class="section g-columns">
    <article class="g-col g-9">
 
-      <? if ($page->byline() != ''): ?>
+      <?php if ($page->byline() != ''): ?>
         <div class="byline"><em><?= kirbytext($page->byline()) ?></em></div>
-      <? endif ?>
+      <?php endif ?>
 
       <?= kirbytext($page->text()) ?>
 
    </article>
 
    <aside class="blog-sidebar g-col g-3">
-     <? snippet('blog-sidebar') ?>
+     <?php snippet('blog-sidebar') ?>
    </aside>
 
 </section>

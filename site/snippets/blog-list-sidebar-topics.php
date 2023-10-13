@@ -1,4 +1,4 @@
-<? $topics = array_unique($topics); ?>
+<?php $topics = array_unique($topics); ?>
 
 <div class="sort">
 
@@ -10,7 +10,7 @@
       <a href="#all" data-sort="all" class="js-filters-active" tabindex="-1">All</a>
     </li>
 
-    <?
+    <?php
     foreach($topics as $topic):
     $topic_class = strtolower(preg_replace('/\s+/', '_', $topic));
     ?>
@@ -19,7 +19,7 @@
       <a href="#<?= $topic_class ?>" data-sort="<?= $topic_class ?>" tabindex="-1"><?= $topic ?></a>
     </li>
 
-    <? endforeach ?>
+    <?php endforeach ?>
 
   </ul>
 </div>

@@ -20,11 +20,11 @@
 
       <div class="in-article">
 
-        <? foreach ($page->images() as $logo): ?>
+        <?php foreach ($page->images() as $logo): ?>
           <div class="grid-4-3-2">
             <img src="<?= $logo->url() ?>" alt="" />
           </div>
-        <? endforeach; ?>
+        <?php endforeach; ?>
 
       </div>
 
@@ -44,9 +44,9 @@
 
    </article>
 
-   <? $siblings = $page->siblings($self = false); ?>
+   <?php $siblings = $page->siblings($self = false); ?>
 
-   <? if($siblings != ''): ?>
+   <?php if($siblings != ''): ?>
 
    <aside class="col-25pc">
       <div class="container series u-margin-top-off">
@@ -55,18 +55,18 @@
 
          <ul class="vertical-list u-margin-top-off-children">
 
-          <? foreach($siblings as $sibling): ?>
+          <?php foreach($siblings as $sibling): ?>
             <li>
               <a class="milli" href="<?= $sibling->url() ?>"><?= $sibling->title() ?></a>
             </li>
-          <? endforeach ?>
+          <?php endforeach ?>
 
          </ul>
 
       </div>
    </aside>
 
- <? endif ?>
+ <?php endif ?>
 
    </div>
 </section>

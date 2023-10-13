@@ -1,6 +1,6 @@
 <section id="contactform">
 
-<? if(param('status') == "go"):
+<?php if(param('status') == "go"):
 
   $email = get('email');
   $name  = get('name');
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <? else: ?>
+    <?php else: ?>
 
     <div class="message-fail">
       <div class="g-columns u-center">
@@ -29,9 +29,9 @@
       </div>
     </div>
 
-    <? endif ?>
+    <?php endif ?>
 
-  <? else: ?>
+  <?php else: ?>
 
   <h2><?= $page->headline() ?></h2>
 
@@ -62,7 +62,7 @@
 
   </form>
 
-  <? endif ?>
+  <?php endif ?>
 
 </section>
 

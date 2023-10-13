@@ -1,4 +1,4 @@
-<?
+<?php
 
 $blog = $pages->find('blog');
 
@@ -19,7 +19,7 @@ if ($page->heroImg() != '') {
 ?>
 
 <div class="hero u-margin-top-off">
-  <? if ($img != NULL): ?>
+  <?php if ($img != NULL): ?>
     <div class="hero-img" style="background-image: url(<?= $img->url() ?>)" alt="" draggable="false"></div>
-  <? endif ?>
+  <?php endif ?>
 </div>

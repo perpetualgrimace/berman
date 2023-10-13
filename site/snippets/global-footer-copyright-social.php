@@ -3,7 +3,7 @@
 <h3 class="u-screenreader">Follow Berman:</h3>
 
 <ul class="footer-social-list u-margin-top inline-list">
-  <?
+  <?php
 
   // define social media icons in an array
   $social_media = ['twitter', 'facebook', 'instagram'];
@@ -15,9 +15,9 @@
 
     <li class="footer-social-item">
       <a class="footer-social-link footer-social-link-<?= $social ?>" href="http://<?= $social ?>.com/<?= $pages->find('contact')->$social() ?>">
-        <? snippet($snippet) ?><span class="u-screenreader"><?= $social ?></span>
+        <?php snippet($snippet) ?><span class="u-screenreader"><?= $social ?></span>
       </a>
     </li>
 
-  <? endforeach ?>
+  <?php endforeach ?>
 </ul>

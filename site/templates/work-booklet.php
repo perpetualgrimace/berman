@@ -1,1 +1,1 @@
-<? snippet('work-booklet') ?>
+<?php snippet('work-booklet') ?>

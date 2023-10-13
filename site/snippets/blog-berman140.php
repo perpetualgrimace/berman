@@ -1,4 +1,4 @@
-<?
+<?php
 
 // convert structured list to kirby collection
 $responses = $page->responses()->toStructure();
@@ -8,7 +8,7 @@ $responses = $page->responses()->toStructure();
 <section class="section g-columns">
 
   <article class="g-col g-8">
-    <? foreach ($responses as $response):
+    <?php foreach ($responses as $response):
 
       // get the response
       $responseText = $response->response()->widont();
@@ -53,11 +53,11 @@ $responses = $page->responses()->toStructure();
 
     </div>
 
-    <? endforeach ?>
+    <?php endforeach ?>
   </article>
 
   <aside class="g-col g-4">
-    <? snippet('blog-sidebar') ?>
+    <?php snippet('blog-sidebar') ?>
   </aside>
 
 </section>

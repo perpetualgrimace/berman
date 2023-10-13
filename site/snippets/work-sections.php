@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get child pages
 $sections = $page->children()->visible();

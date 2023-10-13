@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for svg logo first
 if ($page->image($page->logoImgSvg()) || $page->image('logo.svg')) {
@@ -39,28 +39,28 @@ if ($page->image($page->logoImgSvg()) || $page->image('logo.svg')) {
     <div class="g-columns work-headline-container">
       <div class="g-col">
 
-          <? if($mainLogo != NULL): ?>
+          <?php if($mainLogo != NULL): ?>
 
             <h1 class="work-headline <?= $page->slug() . '-headline' ?>">
               <img class="work-headline-logo" src="<?= $mainLogo->url() ?>"
-                <? if($fallbackLogo != NULL): ?>
+                <?php if($fallbackLogo != NULL): ?>
                   onerror="this.src=<?= $fallbackLogo->url() ?>"
-                <? endif ?>
+                <?php endif ?>
               alt="" draggable="false"><span class="u-screenreader"><?= $page->title() ?></span>
             </h1>
 
-          <? else: ?>
+          <?php else: ?>
 
             <h1 class="work-headline display"><?= $page->title() ?></h1>
 
-          <? endif ?>
+          <?php endif ?>
 
       </div><!-- .g-col -->
     </div><!-- .g-columns -->
   </div><!-- .g-container -->
 
   <!-- hero image -->
-  <? snippet('work-header-hero') ?>
+  <?php snippet('work-header-hero') ?>
 
 </header>
 

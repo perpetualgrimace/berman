@@ -1,11 +1,11 @@
-<?
+<?php
 // make sure $showSeriesName is defined, defaults to TRUE
 if (isset($showSeriesName)) { $showSeriesName = $showSeriesName; }
 else { $showSeriesName = TRUE; }
 ?>
 
 <li class="milli">
-  <a href="<?= $article->url() ?>"><?
+  <a href="<?= $article->url() ?>"><?php
 
     /* Three possible formats:
        - Series name, #1: Article title

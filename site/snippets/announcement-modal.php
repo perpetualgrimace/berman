@@ -1,4 +1,4 @@
-<div class="announcement-wrapper js-announcement is-hidden<? if(isset($_COOKIE['announcement-dismiss']) && ($_COOKIE['announcement-dismiss'] == 'yes')) { echo ' is-dismissed';} ?>" hidden>
+<div class="announcement-wrapper js-announcement is-hidden<?php if(isset($_COOKIE['announcement-dismiss']) && ($_COOKIE['announcement-dismiss'] == 'yes')) { echo ' is-dismissed';} ?>" hidden>
   <article class="announcement g-columns u-center">
     <div class="announcement-inner g-col">
       <h2 class="announcement-heading">Bigger Better Faster Stronger</h2>

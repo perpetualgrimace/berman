@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get the list of youtube videos
 $videos = $section->videoList()->toStructure();
@@ -23,10 +23,10 @@ $jsDataAttrPrev = 'data-js="video-slider-prev"';
     <div class="video-container g-col g-8 u-margin-bottom-off u-padding-bottom-sm">
 
       <!-- multiple videos -->
-      <? if ($videos->count() > 1): ?>
+      <?php if ($videos->count() > 1): ?>
         <!-- trigger bx-slider within its own container, or else it messes up the grid -->
         <div class="video-list slider u-margin-top-off-children" <?= $jsDataAttr ?>>
-          <? foreach($videos as $video) {
+          <?php foreach($videos as $video) {
             snippet('work-video-figure', [
               'video' => $video
              ]);
@@ -40,7 +40,7 @@ $jsDataAttrPrev = 'data-js="video-slider-prev"';
         </ul>
 
       <!-- single video -->
-      <? else:
+      <?php else:
         snippet('work-video-figure', [
           'video' => $videos->first()
         ]);

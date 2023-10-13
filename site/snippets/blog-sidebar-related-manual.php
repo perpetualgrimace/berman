@@ -3,13 +3,13 @@
   <h3 class="delta">Related:</h3>
   <ul class="vertical-list u-margin-top-off-children">
 
-    <? foreach($articles as $articlePath):
+    <?php foreach($articles as $articlePath):
       $article = $pages->find($articlePath);
     ?>
       <li class="milli">
-        <a href="<?= $article->url() ?>"><? e($article->series() != '', $article->series() . ': ') ?><?= $article->title() ?></a>
+        <a href="<?= $article->url() ?>"><?php e($article->series() != '', $article->series() . ': ') ?><?= $article->title() ?></a>
       </li>
-    <? endforeach ?>
+    <?php endforeach ?>
 
   </ul>
 </div>

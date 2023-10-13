@@ -1,8 +1,8 @@
-<? $device = s::get('device_class'); ?>
+<?php $device = s::get('device_class'); ?>
 
 <header class=" home-header header g-columns">
 
-   <? if($device == 'mobile'): ?><div class="home-hero-mobile"><? endif ?>
+   <?php if($device == 'mobile'): ?><div class="home-hero-mobile"><?php endif ?>
 
       <div class="header g-columns u-left-center">
         <h1 class="home-headline display giga" style="transform: translateY(1em); opacity: 0;"><?= $page->headline() ?></h1>
@@ -12,7 +12,7 @@
 
       <div class="header-overlay"></div>
 
-      <? if($device != 'mobile'): ?>
+      <?php if($device != 'mobile'): ?>
 
         <video width="0" height="0" class="home-video u-margin-top-off" id="video-background" preload="auto" autoplay loop="loop" muted>
           <source data-src="<?= $site->url() ?>/content/home/video.mp4"  type="video/mp4">
@@ -21,9 +21,9 @@
           <img src="<?= $site->url() ?>/content/home/video.jpg">
         </video>
 
-      <? endif; ?>
+      <?php endif; ?>
 
-    <? if($device == 'mobile'): ?></div><? endif ?>
+    <?php if($device == 'mobile'): ?></div><?php endif ?>
 
    </div>
 </header>

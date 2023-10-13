@@ -1,4 +1,4 @@
-<?
+<?php
 
 $thisYear = $pages->find('blog')->children()->not('series')->last();
 $lastYear = $pages->find('blog')->children()->not('series')->slice(1, 2);
@@ -23,7 +23,7 @@ if ($thisYearArticles->count() > 5) {
     <div class="heading gamma u-margin-top u-margin-bottom-lg" role="presentation">The Berman blog</div>
 
     <ul class="blog-list">
-      <? foreach($articles as $article) {
+      <?php foreach($articles as $article) {
         snippet('blog-card', ['article' => $article]);
       } ?>
     </ul>

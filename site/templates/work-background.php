@@ -1,1 +1,1 @@
-<? snippet('work-background') ?>
+<?php snippet('work-background') ?>

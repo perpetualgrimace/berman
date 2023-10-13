@@ -1,1 +1,1 @@
-<? snippet('work-screenshots') ?>
+<?php snippet('work-screenshots') ?>

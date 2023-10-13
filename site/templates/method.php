@@ -1,4 +1,4 @@
-<?
+<?php
 
 snippet('global-head', ['bodyClass' => 'method']);
 snippet('global-nav');

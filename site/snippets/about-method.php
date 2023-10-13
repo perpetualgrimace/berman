@@ -1,7 +1,7 @@
 <section class="g-columns">
   <div id="intro" class="g-columns">
 
-    <? if ($page->quote() != ''): ?>
+    <?php if ($page->quote() != ''): ?>
 
       <article class="col-70pc">
         <?= kirbytext($page->text()) ?>
@@ -18,13 +18,13 @@
         </blockquote>
       </aside>
 
-    <? else: ?>
+    <?php else: ?>
 
       <article class="col-70pc">
         <?= kirbytext($page->text()) ?>
       </article>
 
-    <? endif ?>
+    <?php endif ?>
 
   </div>
 
@@ -46,7 +46,7 @@
           <?= kirbytext($page->$stage()) ?>
         </div>
       </div>
-      <? } endfor ?>
+      <?php } endfor ?>
 
     </article>
   </div>

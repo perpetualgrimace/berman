@@ -1,4 +1,4 @@
-<?
+<?php
 
 snippet('global-head', ['bodyClass' => 'contact']);
 snippet('global-nav');

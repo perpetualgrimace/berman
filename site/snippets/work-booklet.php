@@ -1,4 +1,4 @@
-<?
+<?php
 
 // First, check for pages field.
 if ($section->pages() != '') {
@@ -33,7 +33,7 @@ $jsDataAttrPrev = 'data-js="booklet-slider-prev-' . $section->idNumber() . '"';
       <!-- trigger bx-slider within its own container, or else it messes up the grid -->
       <ul class="booklet-list" <?= $jsDataAttr ?>>
 
-        <? foreach($images as $image):
+        <?php foreach($images as $image):
           // increment the counter
           $slideCount++;
           // if using the slides field, use the image function and get a valid url
@@ -50,15 +50,15 @@ $jsDataAttrPrev = 'data-js="booklet-slider-prev-' . $section->idNumber() . '"';
           <a class="booklet-link" href="<?= $imgUrl ?>" data-source="<?= $imgUrl ?>" title="" >
             <img class="booklet-img" data-src="<?= $imgUrl ?>" alt="" draggable="false">
             <!-- if javascript fails to load, only show the first slide -->
-            <? if ($slideCount == 1): ?>
+            <?php if ($slideCount == 1): ?>
               <noscript>
                 <img class="booklet-img" src="<?= $imgUrl ?>" alt="" draggable="false">
               </noscript>
-            <? endif ?>
+            <?php endif ?>
           </a>
         </li>
 
-      <? endforeach ?>
+      <?php endforeach ?>
 
       </ul>
 

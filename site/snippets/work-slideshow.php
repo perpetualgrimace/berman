@@ -1,4 +1,4 @@
-<?
+<?php
 
 // First, check for slides field.
 if ($section->slides() != '') {
@@ -20,7 +20,7 @@ $jsDataAttr = 'data-js="work-slideshow"';
 <div class="work-slideshow-section u-fullwidth">
   <ul class="work-slideshow-list" <?= $jsDataAttr ?>>
 
-    <? foreach($slides as $slide):
+    <?php foreach($slides as $slide):
       // increment the counter
       $slideCount++;
       // if using the slides field, use the image function and get a valid url
@@ -36,14 +36,14 @@ $jsDataAttr = 'data-js="work-slideshow"';
       <li class="work-slideshow-item u-margin-top-off">
         <img class="work-slideshow-img" data-src="<?= $imgUrl ?>" alt="" draggable="false">
         <!-- if javascript fails to load, only show the first slide -->
-        <? if ($slideCount == 1): ?>
+        <?php if ($slideCount == 1): ?>
           <noscript>
             <img class="work-slideshow-img" src="<?= $imgUrl ?>" alt="" draggable="false">
           </noscript>
-        <? endif ?>
+        <?php endif ?>
       </li>
 
-    <? endforeach ?>
+    <?php endforeach ?>
 
   </ul><!-- .work-slideshow-list -->
 </div><!-- .work-slideshow-section.u-fullwidth -->

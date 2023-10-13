@@ -1,4 +1,4 @@
-<?
+<?php
 
 snippet('global-head', ['bodyClass' => 'sibling']);
 snippet('global-nav');

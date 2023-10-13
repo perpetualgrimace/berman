@@ -15,7 +15,7 @@
 
    </div>
 
-   <? snippet('home-header-hero') ?>
+   <?php snippet('home-header-hero') ?>
 </header>
 
 <div class="scroll-indicator-container">

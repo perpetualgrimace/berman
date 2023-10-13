@@ -1,4 +1,4 @@
-<?
+<?php
 
 $authors = $page->authors()->toStructure();
 $authorImg = $site->url() . '/assets/img/berman-team@2x.png'; // default

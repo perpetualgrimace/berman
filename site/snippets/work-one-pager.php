@@ -1,4 +1,4 @@
-<?
+<?php
 
 // First, check for pages field.
 if ($section->pages() != '') {
@@ -28,7 +28,7 @@ $jsDataAttr = 'data-js="one-pager-' . $section->idNumber() . '"';
     <!-- group of images -->
     <div class="one-pager-container g-col g-8 g-columns g-constant u-margin-bottom-off u-margin-top-off-children" <?= $jsDataAttr ?>>
 
-      <? foreach($images as $image):
+      <?php foreach($images as $image):
         // if using the slides field, use the image function and get a valid url
         if ($section->pages() != '') {
           $imgUrl = $section->image($image->page())->url();
@@ -46,7 +46,7 @@ $jsDataAttr = 'data-js="one-pager-' . $section->idNumber() . '"';
           </noscript>
         </a>
 
-      <? endforeach ?>
+      <?php endforeach ?>
 
     </div><!-- .one-pager-container -->
 

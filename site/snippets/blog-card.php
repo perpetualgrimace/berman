@@ -1,4 +1,4 @@
-<?
+<?php
 
 $authors = $article->authors()->toStructure();
 $authorCount = 0; // init
@@ -59,18 +59,18 @@ if ($article->thumbImg() != '') {
 <li class="card blog-card <?= $authorClass ?>" data-author="<?= $authorClass ?>" data-series="<?= $article->series() ?>">
 
     <a href="<?= $article->url() ?>" class="card-thumb blog-card-thumb" tabindex="-1" aria-hidden="true">
-      <? if ($thumbImg != NULL): ?>
+      <?php if ($thumbImg != NULL): ?>
         <img class="card-img" data-src="<?= $thumbImg->url() ?>" alt="" draggable="false">
         <noscript>
           <img class="card-img" src="<?= $thumbImg->url() ?>" alt="" draggable="false">
         </noscript>
-      <? endif ?>
+      <?php endif ?>
     </a>
 
     <div class="card-caption">
        <a class="card-title display gamma" href="<?= $article->url() ?>"><?= $article->title() ?></a>
-       <p class="card-meta u-margin-top-sm">Written by <a class="card-meta-link u-underline-off" href="<?= $authorLink ?>"><? snippet('icon-author') ?> <span class="u-underline"><?= $authorName ?></span></a>
-       <? if($article->series() != ''): ?> in <a class="card-meta-link card-meta-series-link u-underline-off" href="<?= $seriesLink ?>"> <? snippet('icon-series') ?> <span class="u-underline"><?= $seriesTitle ?></span></a><? endif ?></p>
+       <p class="card-meta u-margin-top-sm">Written by <a class="card-meta-link u-underline-off" href="<?= $authorLink ?>"><?php snippet('icon-author') ?> <span class="u-underline"><?= $authorName ?></span></a>
+       <?php if($article->series() != ''): ?> in <a class="card-meta-link card-meta-series-link u-underline-off" href="<?= $seriesLink ?>"> <?php snippet('icon-series') ?> <span class="u-underline"><?= $seriesTitle ?></span></a><?php endif ?></p>
     </div>
 
 </li>

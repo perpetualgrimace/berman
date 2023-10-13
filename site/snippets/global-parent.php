@@ -1,4 +1,4 @@
-<? $children = $page->children()->visible(); ?>
+<?php $children = $page->children()->visible(); ?>
 
 
 <section class="parent-container section u-padding-bottom-off">
@@ -9,16 +9,16 @@
   </article>
 
   <aside class="parent-sidebar g-col g-3">
-    <? if ($page->sidebarTitle() != ''): ?>
+    <?php if ($page->sidebarTitle() != ''): ?>
       <h2 class="gamma"><?= $page->sidebarTitle() ?></h2>
-    <? endif ?>
+    <?php endif ?>
 
     <ul class="vertical-list u-margin-top-sm">
-      <? foreach($children as $child): ?>
+      <?php foreach($children as $child): ?>
         <li>
           <a href="<?= $child->url() ?>" class="milli"><?= $child->title() ?></a>
         </li>
-      <? endforeach ?>
+      <?php endforeach ?>
     </ul>
   </aside>
 

@@ -1,4 +1,4 @@
-<h2><? e($page->cta_comments() != '', $page->cta_comments(), 'What do you think?') ?></h2>
+<h2><?php e($page->cta_comments() != '', $page->cta_comments(), 'What do you think?') ?></h2>
 
 <div class="comments" id="disqus_thread">
   <script type="text/javascript">

@@ -1,4 +1,4 @@
-<?
+<?php
 // check for alignment
 if (isset($alignment)) {
   $alignment = ' ' . $alignment; }

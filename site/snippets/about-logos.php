@@ -1,4 +1,4 @@
-<?
+<?php
 
 $logos = $pages->find('about/logos')->images()->filterBy('extension', 'svg');
 
@@ -12,7 +12,7 @@ $logos = $pages->find('about/logos')->images()->filterBy('extension', 'svg');
     </div>
 
     <div class="logo-container u-margin-top-lg u-margin-bottom">
-      <? foreach($logos as $logo) {
+      <?php foreach($logos as $logo) {
         snippet('logo-svg', ['file' => $logo]);
       } ?>
     </div>

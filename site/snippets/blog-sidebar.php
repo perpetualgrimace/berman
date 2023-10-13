@@ -1,4 +1,4 @@
-<?
+<?php
 
 // variables
 $limit   = 5;

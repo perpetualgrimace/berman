@@ -1,4 +1,4 @@
-<?
+<?php
 
 // image
 if ($work->image() != '') {
@@ -20,16 +20,16 @@ if ($work->page() != '') {
 
     <a href="<?= $link ?>" class="thumb-link">
       <div class="thumb-caption">
-        <span class="thumb-title display gamma"><?= $work->client() ?></span><? if ($work->caption() != ''): ?><span class="u-screenreader">: </span><span class="thumb-meta milli"><?= $work->caption() ?></span><? endif ?>
+        <span class="thumb-title display gamma"><?= $work->client() ?></span><?php if ($work->caption() != ''): ?><span class="u-screenreader">: </span><span class="thumb-meta milli"><?= $work->caption() ?></span><?php endif ?>
       </div>
     </a>
 
-    <? if ($thumbImg != NULL): ?>
+    <?php if ($thumbImg != NULL): ?>
       <img class="home-thumb-img thumb-img" data-src="<?= $thumbImg->url() ?>" alt="" width="<?= $thumbImg->width() ?>" height="<?= $thumbImg->height() ?>">
       <noscript>
         <img class="home-thumb-img thumb-img" src="<?= $thumbImg->url() ?>" alt="" width="<?= $thumbImg->width() ?>" height="<?= $thumbImg->height() ?>">
       </noscript>
-    <? endif ?>
+    <?php endif ?>
 
     <div class="thumb-underlay"></div>
 

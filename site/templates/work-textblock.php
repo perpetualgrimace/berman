@@ -1,1 +1,1 @@
-<? snippet('work-textblock') ?>
+<?php snippet('work-textblock') ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 /*
 $topic = $page->primary_topic();
@@ -50,25 +50,25 @@ if ($page->socialImg() != '') {
         <a class="share-link" target="_blank"
           href="https://twitter.com/share?url=<?= $url . '&text=' . $excerpt . '&via=' . $contact->twitter() . '&hashtags=' . $hashtag ?>">
           <span class="u-screenreader">Share on Twitter</span>
-          <? snippet('share-icon-twitter') ?>
+          <?php snippet('share-icon-twitter') ?>
         </a>
 
         <a class="share-link" target="_blank"
           href="http://www.facebook.com/sharer.php?u=<?= $url ?>">
           <span class="u-screenreader">Share on Facebook</span>
-          <? snippet('share-icon-facebook') ?>
+          <?php snippet('share-icon-facebook') ?>
         </a>
 
         <a class="share-link" target="_blank"
           href="http://www.linkedin.com/shareArticle?url=<?= $url . '&title=' . $title ?>">
           <span class="u-screenreader">Share on LinkedIn</span>
-          <? snippet('share-icon-linkedin') ?>
+          <?php snippet('share-icon-linkedin') ?>
         </a>
 
         <a class="share-link" target="_blank"
           href="https://plus.google.com/share?url=<?= $url ?>">
           <span class="u-screenreader">Share on Google+</span>
-          <? snippet('share-icon-gplus') ?>
+          <?php snippet('share-icon-gplus') ?>
         </a>
 
       </div>

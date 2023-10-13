@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get siblings
 $siblings = $page->siblings($self = false)->visible();
@@ -24,20 +24,20 @@ if($page->sidebarTitle() != '') {
       <?= kirbytext($page->text()) ?>
     </article>
 
-    <? if ($siblings != ''): ?>
+    <?php if ($siblings != ''): ?>
       <aside class="parent-sidebar g-col g-3">
 
           <h2 class="gamma"><?= $sidebarTitle ?></h2>
 
           <ul class="vertical-list u-margin-top-sm">
-            <? foreach($siblings as $sibling): ?>
+            <?php foreach($siblings as $sibling): ?>
               <li>
                 <a href="<?= $sibling->url() ?>" class="milli"><?= $sibling->title() ?></a>
               </li>
-            <? endforeach ?>
+            <?php endforeach ?>
           </ul>
       </aside>
-    <? endif ?>
+    <?php endif ?>
 
   </div>
 </section>

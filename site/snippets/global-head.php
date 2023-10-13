@@ -11,7 +11,7 @@
 
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
-  <?
+  <?php
 
   // meta text and image for linking and sharing
   snippet('global-head-seo');
@@ -36,7 +36,7 @@
 </head>
 
 
-<? // set body classes
+<?php // set body classes
 
 $template = str_replace('.', '-', $page->intendedTemplate());
 
@@ -59,4 +59,4 @@ $bodyClasses = $template . ' ' . $slug . ' ' . $customBodyClass . ' depth-' . $p
 
 <body class="<?= $bodyClasses ?>">
 
-<? // snippet('announcement-modal') ?>
+<?php // snippet('announcement-modal') ?>

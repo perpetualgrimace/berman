@@ -1,4 +1,4 @@
-<?
+<?php
 
 $articles = $page->parent()->children()->visible()->flip();
 
@@ -42,17 +42,17 @@ if ($next->nextImg() != '') {
   <a href="<?= $next->url() ?>" class="next-link g-container u-padding-top-xl u-padding-bottom-xl">
     <div class="g-col u-margin-top u-margin-bottom">
       <h2 class="next-title display"><span class="u-screenreader">Next up: </span>
-        <? snippet('blog-title', ['article' => $next]) ?>
+        <?php snippet('blog-title', ['article' => $next]) ?>
       </h2>
     </div>
   </a>
 
   <!-- background image -->
-  <? if ($nextImg != NULL): ?>
+  <?php if ($nextImg != NULL): ?>
     <div class="next-img u-margin-top-off" data-bg-src="<?= $nextImg->url() ?>"></div>
     <noscript>
       <div class="next-img u-margin-top-off" style="background-image: url(<?= $nextImg->url() ?>);"></div>
     </noscript>
-  <? endif ?>
+  <?php endif ?>
 
 </section>

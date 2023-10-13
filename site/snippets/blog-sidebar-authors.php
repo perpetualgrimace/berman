@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get up to three authors for current post
 // NOTE: assumes Berman140 author field is blank
@@ -29,11 +29,11 @@ foreach($page->authors()->toStructure()->limit(3) as $author):
   <h2 class="gamma">More from <?= $authorName ?>:</h2>
 
   <ul class="vertical-list u-margin-top-off-children">
-    <? foreach($articles as $article):
+    <?php foreach($articles as $article):
       snippet('related-article', ['article' => $article]);
     endforeach ?>
   </ul>
 </div>
 
 
-<? endforeach // each author ?>
+<?php endforeach // each author ?>

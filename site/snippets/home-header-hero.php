@@ -1,4 +1,4 @@
-<?
+<?php
 
 if ($page->heroImg() != '') {
   $img = $page->image($page->heroImg());

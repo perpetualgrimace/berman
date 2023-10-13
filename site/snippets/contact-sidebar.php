@@ -12,7 +12,7 @@
     <dd>
       <a href="mailto:<?= $page->email() ?>" target="_blank"><span class="u-screenreader">Email us: </span><?= $page->email() ?></a>
     </dd>
-    <? if ($page->address1() != ""): ?>
+    <?php if ($page->address1() != ""): ?>
       <dt><strong>Address: </strong></dt>
       <dd>
         <a href="http://maps.google.com/?q=<?= $page->address1() . $page->address2() ?>" target="_blank"><span class="u-screenreader">Our Address: </span>
@@ -21,7 +21,7 @@
           <?= $page->address2()?>
           </a>
       </dd>
-    <? endif ?>
+    <?php endif ?>
 
     <dt><strong>LinkedIn: </strong></dt>
     <dd>

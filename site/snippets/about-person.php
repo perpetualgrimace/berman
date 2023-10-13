@@ -5,11 +5,11 @@
       <?= kirbytext($page->text()) ?>
    </article>
 
-   <? $children = $page->children(); ?>
+   <?php $children = $page->children(); ?>
 
    <aside class="col-25pc">
 
-      <? snippet('about-person-sidebar') ?>
+      <?php snippet('about-person-sidebar') ?>
 
    </aside>
 

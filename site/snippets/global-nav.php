@@ -1,4 +1,4 @@
-<?
+<?php
 
 // main menu items
 $items = $pages->visible();
@@ -20,8 +20,8 @@ $menutext = 'menu';
 
 
     <!-- logo -->
-    <a class="nav-logo<? e( $page->isHomePage(), ' is-active-pg' ) ?>" href="<? e( $page->isHomePage(), '#main', $site->url() ) ?>">
-      <? snippet('icon-berman-logo') ?>
+    <a class="nav-logo<?php e( $page->isHomePage(), ' is-active-pg' ) ?>" href="<?php e( $page->isHomePage(), '#main', $site->url() ) ?>">
+      <?php snippet('icon-berman-logo') ?>
     </a>
 
 
@@ -38,7 +38,7 @@ $menutext = 'menu';
 
     <!-- social media icons -->
     <ul class="nav-social-list">
-    <?
+    <?php
 
     // define social media icons in an array
     $social_media = ['twitter', 'facebook', 'instagram'];
@@ -50,48 +50,48 @@ $menutext = 'menu';
 
       <li class="nav-social-item">
         <a class="nav-social-link nav-social-link-<?= $social ?>" href="http://<?= $social ?>.com/<?= $pages->find('contact')->$social() ?>" tabindex="-1">
-          <? snippet($snippet) ?><span class="u-screenreader"><?= $social ?></span>
+          <?php snippet($snippet) ?><span class="u-screenreader"><?= $social ?></span>
         </a>
       </li>
 
-    <? endforeach ?>
+    <?php endforeach ?>
     </ul>
 
 
     <!-- main nav -->
     <ul id="nav" class="nav-list is-collapsed">
 
-    <? foreach($items as $item): ?>
+    <?php foreach($items as $item): ?>
 
-      <li class="nav-item<? e(in_array($item->uri(), $site->dropdownable()->yaml()), ' has-dropdown" aria-haspopup="true'); ?>">
-        <a class="nav-link<? e($item->isOpen(), ' is-active-pg') ?>" <? e( ($item->slug() == $page->slug()), 'aria-describedby="current"' ) ?> href="<? e( $item->isOpen() && ( $page->slug() == $item->slug() ), '#main', $item->url() ) ?>">
+      <li class="nav-item<?php e(in_array($item->uri(), $site->dropdownable()->yaml()), ' has-dropdown" aria-haspopup="true'); ?>">
+        <a class="nav-link<?php e($item->isOpen(), ' is-active-pg') ?>" <?php e( ($item->slug() == $page->slug()), 'aria-describedby="current"' ) ?> href="<?php e( $item->isOpen() && ( $page->slug() == $item->slug() ), '#main', $item->url() ) ?>">
         <?= $item->uri(); if($item->uri() == 'about'): ?>
           <span class="u-screenreader"> <?= $site->title() ?></span>
-        <? endif; ?>
+        <?php endif; ?>
         </a>
 
         <!-- dropdown, checked against $site->dropdownable() list -->
-        <? if($item->hasChildren() &&
+        <?php if($item->hasChildren() &&
         in_array($item->uri(), $site->dropdownable()->yaml())): ?>
 
         <ul class="dropdown" role="group">
-        <? foreach($item->children()->visible() as $child): ?>
+        <?php foreach($item->children()->visible() as $child): ?>
 
         <li class="dropdown-item">
-          <a id="dropdown-item-<?= $child->slug() ?>" class="dropdown-link<? e($child->isOpen(), ' is-active-pg') ?>" <? e( ($child->slug() == $page->slug() ), 'aria-describedby="current"') ?>
-            href="<? e( $child->isOpen() && ( $page->slug() == $child->slug() ), '#main', $child->url() ) ?>" role="menuitem">
+          <a id="dropdown-item-<?= $child->slug() ?>" class="dropdown-link<?php e($child->isOpen(), ' is-active-pg') ?>" <?php e( ($child->slug() == $page->slug() ), 'aria-describedby="current"') ?>
+            href="<?php e( $child->isOpen() && ( $page->slug() == $child->slug() ), '#main', $child->url() ) ?>" role="menuitem">
               <?= $child->title() ?>
             </a>
         </li>
 
-        <? endforeach ?>
+        <?php endforeach ?>
         </ul>
 
-      <? endif ?>
+      <?php endif ?>
 
       </li>
 
-    <? endforeach ?>
+    <?php endforeach ?>
 
     </ul> <!-- nav-list -->
 

@@ -1,4 +1,4 @@
-<?
+<?php
 
 // $classes = explode(",", $work->tags());
 // $classes = strtr($work->tags(), ",", " ");

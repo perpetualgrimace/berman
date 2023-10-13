@@ -1,4 +1,4 @@
-<?
+<?php
 
 $principles = ['integrity', 'ability', 'spirit'];
 
@@ -11,7 +11,7 @@ $principles = ['integrity', 'ability', 'spirit'];
       <h2 id="principles" class="g-8 u-margins-auto"><?= $page->principlesHeadline() ?></h2>
     </div>
 
-    <? foreach ($principles as $principle):
+    <?php foreach ($principles as $principle):
       $principleHeadline = ucfirst($principle);
     ?>
       <div class="g-col g-4">
@@ -20,7 +20,7 @@ $principles = ['integrity', 'ability', 'spirit'];
           <?= $page->$principle() ?>
         </p>
       </div>
-    <? endforeach ?>
+    <?php endforeach ?>
 
     <a href="<?= $pages->find('careers') ?>" class="button u-margin-top">Careers</a>
 

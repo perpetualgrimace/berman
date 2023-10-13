@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check to see if an article argument has been passed
 if (isset($article)) { $article = $article; }
@@ -13,6 +13,6 @@ if ($article->series() != ''): ?>
       echo ', #' . $article->seriesNum();
     } ?>:</div>
 
-<? endif ?>
+<?php endif ?>
 
 <?= $article->title() // the article title itself ?>

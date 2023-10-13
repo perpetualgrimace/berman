@@ -1,1 +1,1 @@
-<? snippet('work-one-pager') ?>
+<?php snippet('work-one-pager') ?>

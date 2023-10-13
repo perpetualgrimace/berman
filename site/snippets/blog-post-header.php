@@ -2,18 +2,18 @@
   <div class="g-columns u-left">
 
     <h1 class="header-headline display blog-title u-margin-top-xl">
-      <? snippet('blog-title') ?>
+      <?php snippet('blog-title') ?>
     </h1>
-    <? if ($page->subhead() != ''): ?>
+    <?php if ($page->subhead() != ''): ?>
       <h2 class="header-subhead blog-header-subhead u-margin-top-sm">
         <?= $page->subhead() ?>
       </h2>
-    <? endif ?>
+    <?php endif ?>
 
-    <? snippet('blog-attribution') ?>
+    <?php snippet('blog-attribution') ?>
 
   </div>
 
-  <? snippet('global-header-hero') ?>
+  <?php snippet('global-header-hero') ?>
 
 </header>

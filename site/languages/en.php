@@ -1,4 +1,4 @@
-<?
+<?php
 
 l::set('uniform-filled-potty', 'Are you a robot?');
 l::set('uniform-fields-required', 'Please fill in all required fields.');
