@@ -23,7 +23,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
     <title><?= (isset($title)) ? xml($title) : xml($page->title()) ?></title>
     <link><?= (isset($link)) ? xml($link) : xml(url()) ?></link>
     <generator><?= c::get('feed.generator', 'Kirby') ?></generator>
-    <lastBuildDate><?= (isset($modified)) ? date('r', $modified) : date('r', $site->modified()) ?></lastBuildDate>
+    <lastBuildDate><?= (isset($modified)) ? date()->toDate('r', $modified) : date()->toDate('r', $site->modified()) ?></lastBuildDate>
     <atom:link href="<?= xml(thisURL()) ?>" rel="self" type="application/rss+xml" />
 
     <?php if($page->description() || isset($description)): ?>
@@ -35,7 +35,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
       <title><?= xml($item->title()) ?></title>
       <link><?= xml($item->url()) ?></link>
       <guid><?= xml($item->url()) ?></guid>
-      <pubDate><?= ($item->date()) ? date('r', $item->date()) : date('r', $item->modified()) ?></pubDate>
+      <pubDate><?= ($item->date()) ? date()->toDate('r', $item->date()) : date()->toDate('r', $item->modified()) ?></pubDate>
 
       <?php if(isset($descriptionField)): ?>
         <?php if($item->description() != ''): ?>

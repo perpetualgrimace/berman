@@ -25,7 +25,7 @@
            <h2><?= html($article->title()) ?></h2>
            <ul class="attribution inline-list">
               <?php $author = $pages->find('about/people/' . $article->author()) ?>
-              <li><?= $article->date('m.d.Y') ?></li>
+              <li><?= $article->date()->toDate('m.d.Y') ?></li>
               <li> <?= $author->title() ?></li>
            </ul>
 
