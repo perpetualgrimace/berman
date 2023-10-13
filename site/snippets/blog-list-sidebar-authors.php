@@ -1,4 +1,4 @@
-<?php $authors = $pages->find('about/people/')->children()->visible(); ?>
+<?php $authors = $pages->find('about/people/')->children()->listed(); ?>
 
 
 <label class="select-label u-margin-top-off" for="author-select">Sort by author:</label>

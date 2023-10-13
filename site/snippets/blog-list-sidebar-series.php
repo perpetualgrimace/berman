@@ -10,7 +10,7 @@
       $title = $series->title()->excerpt(7, 'words');
       $label = $title;
       // attempted to add article counts, but it failed after the first entry 🤷‍
-      // $count = $page->grandChildren()->visible()->filterBy('series', 'berman140')->count();
+      // $count = $page->grandChildren()->listed()->filterBy('series', 'berman140')->count();
       // $label = $title . ' (' . $count . ')';
     ?>
         <option value="<?= $series->slug() ?>"><?= $label ?></option>

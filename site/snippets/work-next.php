@@ -5,7 +5,7 @@
 if ($page->hasNextVisible()) {
   $next = $page->nextVisible();
 } else {
-  $next = $page->siblings()->visible()->first();
+  $next = $page->siblings()->listed()->first();
 }
 
 // next image

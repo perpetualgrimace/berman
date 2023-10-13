@@ -2,7 +2,7 @@
 
 $ignore = array('sitemap', 'error');
 
-$pageList = $pages->index()->visible()
+$pageList = $pages->index()->listed()
   ->filterBy('template', '!=', 'work-background')
   ->filterBy('template', '!=', 'work-booklet')
   ->filterBy('template', '!=', 'work-logo')

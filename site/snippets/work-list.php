@@ -1,7 +1,7 @@
 <?php
 
 // get all work pages
-$works = $pages->find('work')->children()->visible();
+$works = $pages->find('work')->children()->listed();
 
 // limit works on home page
 if ($page->isHomePage()) {

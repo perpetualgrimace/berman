@@ -1,7 +1,7 @@
 <?php
 
 // main menu items
-$items = $pages->visible();
+$items = $pages->listed();
 
 // text that applies next to menu icon
 $menutext = 'menu';
@@ -75,7 +75,7 @@ $menutext = 'menu';
         in_array($item->uri(), $site->dropdownable()->yaml())): ?>
 
         <ul class="dropdown" role="group">
-        <?php foreach($item->children()->visible() as $child): ?>
+        <?php foreach($item->children()->listed() as $child): ?>
 
         <li class="dropdown-item">
           <a id="dropdown-item-<?= $child->slug() ?>" class="dropdown-link<?php e($child->isOpen(), ' is-active-pg') ?>" <?php e( ($child->slug() == $page->slug() ), 'aria-describedby="current"') ?>

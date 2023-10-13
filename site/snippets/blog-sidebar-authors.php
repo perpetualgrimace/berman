@@ -10,7 +10,7 @@ foreach($page->authors()->toStructure()->limit(3) as $author):
   // 1. move from /blog/year/slug to /blog/, then grab all grand children
   // 2. look for fuzzy author field matches
   // 3. filter out inivisible, non-blog posts
-  $articles = $page->parent()->parent()->grandchildren()->filterBy('authors', '*=', $author)->visible()->filterBy('template', 'blog')->not($page)->flip();
+  $articles = $page->parent()->parent()->grandchildren()->filterBy('authors', '*=', $author)->listed()->filterBy('template', 'blog')->not($page)->flip();
 
   // exclude related articles from the same series (because that would be redundant)
   // ...then apply related article limit

@@ -1,5 +1,5 @@
 <?php
-  $blogList = $pages->find('blog')->children()->visible()->filterBy('authors', $page->slug())->filterBy('template', 'blog');
+  $blogList = $pages->find('blog')->children()->listed()->filterBy('authors', $page->slug())->filterBy('template', 'blog');
   if(($blogList != '') && (count($blogList) > 0)):
 ?>
 

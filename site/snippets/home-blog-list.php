@@ -3,8 +3,8 @@
 $thisYear = $pages->find('blog')->children()->not('series')->last();
 $lastYear = $pages->find('blog')->children()->not('series')->slice(1, 2);
 
-$thisYearArticles = $thisYear->children()->visible()->flip();
-$lastYearArticles = $lastYear->children()->visible()->flip();
+$thisYearArticles = $thisYear->children()->listed()->flip();
+$lastYearArticles = $lastYear->children()->listed()->flip();
 
 if ($thisYearArticles->count() > 5) {
   $articles = $thisYearArticles->limit(6);

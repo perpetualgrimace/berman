@@ -119,7 +119,7 @@ function relatedpages($options = array()) {
  * Get pages from $site->children()->index(), either all or only visible pages
  */
   $allPages = site()->children()->index();
-  if ($options['visibleOnly']) { $allPages = $allPages->visible(); }
+  if ($options['visibleOnly']) { $allPages = $allPages->listed(); }
 
 /**
  * Get the items to search for from the current active page, but only if no items supplied

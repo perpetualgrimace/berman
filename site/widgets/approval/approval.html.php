@@ -1,6 +1,6 @@
 <?php
 
-$invisiblePages = site()->index()->invisible();
+$invisiblePages = site()->index()->unlisted();
 $ready = $invisiblePages->filterBy('approval', 'ready');
 $approved = $invisiblePages->filterBy('approval', 'approved');
 
