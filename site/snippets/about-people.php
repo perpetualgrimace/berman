@@ -18,7 +18,7 @@
 
     <article class="col-70pc">
 
-      <?= kirbytext($page->text()) ?>
+      <?= $page->text()->kirbytext() ?>
 
       <?php foreach($people as $person): ?>
         <?php snippet('about-person-card', ['person' => $person]) ?>
@@ -28,7 +28,7 @@
 
     <aside class="quote col-25pc u-hide-below-m3">
       <blockquote>
-        <?= kirbytext($page->quote()) ?>
+        <?= $page->quote()->kirbytext() ?>
       </blockquote>
     </aside>
 

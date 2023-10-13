@@ -2,21 +2,21 @@
    <div class="g-columns u-left">
 
    <article class="col-70pc">
-      <?= kirbytext($page->text()) ?>
+      <?= $page->text()->kirbytext() ?>
 
       <div class="in-article">
 
         <div class="grid-2-1 u-margin-top">
-          <?= kirbytext($page->col1()) ?>
+          <?= $page->col1()->kirbytext() ?>
         </div>
 
         <div class="grid-2-1 u-margin-top">
-          <?= kirbytext($page->col2()) ?>
+          <?= $page->col2()->kirbytext() ?>
         </div>
 
       </div>
 
-      <?= kirbytext($page->logos()) ?>
+      <?= $page->logos()->kirbytext() ?>
 
       <div class="in-article">
 
@@ -28,16 +28,16 @@
 
       </div>
 
-      <?= kirbytext($page->branding_services()) ?>
+      <?= $page->branding_services()->kirbytext() ?>
 
       <div class="in-article">
 
         <div class="grid-2-1 u-margin-top">
-         <?= kirbytext($page->col3()) ?>
+         <?= $page->col3()->kirbytext() ?>
         </div>
 
         <div class="grid-2-1 u-margin-top">
-         <?= kirbytext($page->col4()) ?>
+         <?= $page->col4()->kirbytext() ?>
         </div>
 
       </div>

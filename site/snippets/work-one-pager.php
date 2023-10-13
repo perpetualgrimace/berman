@@ -22,7 +22,7 @@ $jsDataAttr = 'data-js="one-pager-' . $section->idNumber() . '"';
 
     <!-- caption -->
     <div class="one-pager-caption g-col g-4 delta">
-      <?= kirbytext($section->text()) ?>
+      <?= $section->text()->kirbytext() ?>
     </div>
 
     <!-- group of images -->

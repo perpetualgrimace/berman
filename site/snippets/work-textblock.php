@@ -8,7 +8,7 @@
 
     <!-- main text -->
     <div class="delta">
-      <?= kirbytext($section->text()) ?>
+      <?= $section->text()->kirbytext() ?>
     </div>
 
   </div>

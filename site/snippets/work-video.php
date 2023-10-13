@@ -16,7 +16,7 @@ $jsDataAttrPrev = 'data-js="video-slider-prev"';
 
     <!-- caption -->
     <div class="video-caption g-col g-4 delta">
-      <?= kirbytext($section->text()) ?>
+      <?= $section->text()->kirbytext() ?>
     </div><!-- list of pages -->
 
     <!-- video container -->

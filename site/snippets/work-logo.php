@@ -52,7 +52,7 @@ if ($section->image($section->logoImgSvg()) || $section->image('logo.svg')) {
 
      <?php endif ?>
 
-      <div class="work-logo-caption delta"><?= kirbytext($section->text()) ?></div>
+      <div class="work-logo-caption delta"><?= $section->text()->kirbytext() ?></div>
 
     </div><!-- .work-logo-container.g-col -->
   </div><!-- .g-columns -->

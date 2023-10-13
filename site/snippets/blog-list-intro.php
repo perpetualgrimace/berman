@@ -1,7 +1,7 @@
 <section class="g-columns">
   <div class="g-columns <?= $alignment ?>">
     <div class="article limited-width">
-      <?= kirbytext($pages->find('home')->blog()) ?>
+      <?= $pages->find('home')->blog()->kirbytext() ?>
       <?php snippet('mailchimp-subscribe') ?>
     </div>
   </div>

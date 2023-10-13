@@ -5,7 +5,7 @@
   <div class="g-columns u-left">
 
   <article class="parent-article g-col g-9">
-    <?= kirbytext($page->text()) ?>
+    <?= $page->text()->kirbytext() ?>
   </article>
 
   <aside class="parent-sidebar g-col g-3">

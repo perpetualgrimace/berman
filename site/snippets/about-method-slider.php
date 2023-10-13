@@ -50,19 +50,19 @@
 
             <li class="no-padding">
                <div class="g-columns">
-                  <div class="limited-width vertical-center"><?= kirbytext($page->Slide1()) ?></div>
+                  <div class="limited-width vertical-center"><?= $page->Slide1()->kirbytext() ?></div>
                </div>
             </li>
 
             <li class="no-padding">
                <div class="g-columns">
-                  <div class="limited-width vertical-center"><?= kirbytext($page->Slide2()) ?></div>
+                  <div class="limited-width vertical-center"><?= $page->Slide2()->kirbytext() ?></div>
                </div>
             </li>
 
             <li class="no-padding">
                <div class="g-columns">
-                  <div class="limited-width vertical-center"><?= kirbytext($page->Slide3()) ?></div>
+                  <div class="limited-width vertical-center"><?= $page->Slide3()->kirbytext() ?></div>
                </div>
             </li>
 
@@ -70,7 +70,7 @@
 
             <li class="no-padding">
                <div class="g-columns">
-                  <div class="limited-width vertical-center"><?= kirbytext($page->Slide4()) ?></div>
+                  <div class="limited-width vertical-center"><?= $page->Slide4()->kirbytext() ?></div>
                </div>
             </li>
 
@@ -79,7 +79,7 @@
 
             <li class="no-padding">
                <div class="g-columns">
-                  <div class="limited-width vertical-center"><?= kirbytext($page->Slide5()) ?></div>
+                  <div class="limited-width vertical-center"><?= $page->Slide5()->kirbytext() ?></div>
                </div>
             </li>
 
@@ -88,7 +88,7 @@
 
             <li class="no-padding">
                <div class="g-columns">
-                  <div class="limited-width vertical-center"><?= kirbytext($page->Slide6()) ?></div>
+                  <div class="limited-width vertical-center"><?= $page->Slide6()->kirbytext() ?></div>
                </div>
             </li>
 
@@ -97,7 +97,7 @@
 
             <li class="no-padding">
                <div class="g-columns">
-                  <div class="limited-width vertical-center"><?= kirbytext($page->Slide7()) ?></div>
+                  <div class="limited-width vertical-center"><?= $page->Slide7()->kirbytext() ?></div>
                </div>
             </li>
 

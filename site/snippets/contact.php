@@ -14,7 +14,7 @@
     <?php elseif($form->hasMessage() && $form->successful()): ?>
       <div class="message-success">
         <div class="g-columns u-center">
-          <?= kirbytext($page->success()) ?>
+          <?= $page->success()->kirbytext() ?>
         </div>
       </div>
 
@@ -23,7 +23,7 @@
     <?php else: ?>
       <div class="message-fail">
         <div class="g-columns u-center">
-          <?= kirbytext($page->fail()) ?>
+          <?= $page->fail()->kirbytext() ?>
         </div>
       </div>
     <?php endif ?>
@@ -45,13 +45,13 @@
 /*
 <div class="alert message-success" style="display: none;">
 <div class="g-columns u-center">
-<?= kirbytext($page->success()) ?>
+<?= $page->success()->kirbytext() ?>
 </div>
 </div>
 
 <div class="alert message-fail" style="display: none;">
 <div class="g-columns u-center">
-<?= kirbytext($page->fail()) ?>
+<?= $page->fail()->kirbytext() ?>
 </div>
 </div>
 */

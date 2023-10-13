@@ -2,7 +2,7 @@
   <div id="method" class="g-columns <?= $alignment ?>">
 
     <article class="gamma col-70pc">
-      <?= kirbytext($page->method()) ?>
+      <?= $page->method()->kirbytext() ?>
     </article>
 
     <aside class="vertical-figure col-25pc u-hide-below-m3 js-bigidea">

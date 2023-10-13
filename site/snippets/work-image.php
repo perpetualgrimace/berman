@@ -19,7 +19,7 @@ if ($section->img() != '') {
     <!-- caption -->
     <!-- NOTE: float doesn't work because of display:flex, but I'm leaving it here as a flex/order fallback -->
     <div class="work-image-caption g-col g-6 delta u-float-right">
-      <?= kirbytext($section->text()) ?>
+      <?= $section->text()->kirbytext() ?>
     </div>
 
     <!-- image -->
