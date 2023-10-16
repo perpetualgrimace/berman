@@ -1,16 +1,18 @@
 <?php
 
-$thisYear = $pages->find('blog')->children()->not('series')->last();
-$lastYear = $pages->find('blog')->children()->not('series')->slice(1, 2);
+// $thisYear = $pages->find('blog')->children()->not('series')->last();
+// $lastYear = $pages->find('blog')->children()->not('series')->slice(1, 2);
 
-$thisYearArticles = $thisYear->children()->listed()->flip();
-$lastYearArticles = $lastYear->children()->listed()->flip();
+// $thisYearArticles = $thisYear->children()->listed()->flip();
+// $lastYearArticles = $lastYear->children()->listed()->flip();
 
-if ($thisYearArticles->count() > 5) {
-  $articles = $thisYearArticles->limit(6);
-} else {
-  $articles = $thisYearArticles->merge($lastYearArticles)->limit(6);
-}
+// if ($thisYearArticles->count() > 5) {
+//   $articles = $thisYearArticles->limit(6);
+// } else {
+//   $articles = $pages->find('blog')->children()->not('series')->limit(6);
+// }
+
+$articles = $pages->find('blog')->children()->not('series')->flip()->children()->listed()->limit(6)->flip();
 
 ?>
 

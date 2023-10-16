@@ -3,6 +3,8 @@
 $authors = $article->authors()->toStructure();
 $authorCount = 0; // init
 
+// dump($authors);
+
 // get number of authors
 foreach ($authors as $author) {
   $authorCount++;
@@ -10,10 +12,12 @@ foreach ($authors as $author) {
 // one author
 if ($authorCount == 1 && $article->template() != 'blog-berman140') {
   $author = $pages->find('about/people/' . $article->authors()->toStructure());
-  $authorClass = $author->slug();
+  // $authorClass = $author->slug(); // TODO: fix
+  $authorClass = "jberman";
   // $authorLink = $pages->find('blog')->url() . '#' . $author->slug();
   // $authorLink = $author->url();
-  $authorName = $author->title();
+  // $authorName = $author->title();
+  $authorName = "Jeff Berman"; // TODO: fix
 // multiple authors
 } else {
   $authorClass = 'berman';
@@ -32,7 +36,8 @@ if ($page == 'blog') {
 // series link
 if ($article->series() != '') {
   $seriesClass = $article->series()->slug();
-  $seriesTitle = $pages->find('blog/series/' . $article->series())->title($article->series());
+  $seriesTitle = $pages->find('blog/series/' . $article->series())->title($article->series()); // TODO: fix
+  // $seriesTitle = "series title";
 
   if ($page == 'blog') {
     $seriesLink = '#' . $seriesClass;
