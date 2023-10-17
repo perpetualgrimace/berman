@@ -34,7 +34,7 @@ if($page->description() != '') {
 } elseif($page->intendedTemplate() == 'berman.140') {
   $shareDescription = 'Berman140 description';
 } elseif($page->text() != '') {
-  $shareDescription = $page->text()->chopper(140);
+  $shareDescription = strip_tags($page->text()->chopper(140));
 } else { $shareDescription = NULL; }
 
 
