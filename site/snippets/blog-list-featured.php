@@ -36,7 +36,7 @@
 
          <?php else: ?>
 
-           <p><? /* TODO: replace with chopper = excerpt($article->text(), 150) */ $article->text() ?></p>
+           <p><?= $article->text()->chopper(150) ?></p>
            <a href="<?= $article->url() ?>" class="button">Read more</a>
 
          <?php endif ?>
