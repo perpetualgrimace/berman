@@ -4,14 +4,14 @@
   <div class="contact-container g-col g-9" id="contactform">
 
     <!-- no message; show contact form -->
-    <?php if(!$form->hasMessage()): ?>
+    <?php // if(!$form->hasMessage()): ?>
 
       <h2><?= $page->headline() ?></h2>
       <?php snippet('contact-form') ?>
 
 
     <!-- success message -->
-    <?php elseif($form->hasMessage() && $form->successful()): ?>
+    <?php /* elseif($form->hasMessage() && $form->successful()): ?>
       <div class="message-success">
         <div class="g-columns u-center">
           <?= $page->success()->kirbytext() ?>
@@ -26,7 +26,7 @@
           <?= $page->fail()->kirbytext() ?>
         </div>
       </div>
-    <?php endif ?>
+    <?php endif */ ?>
 
   </div>
 

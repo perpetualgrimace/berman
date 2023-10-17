@@ -2,7 +2,7 @@
 
 return function($site, $pages, $page) {
 
-  $form = uniform('contact-form', array(
+  $form = array(
       'required' => array(
         'name' => '',
         'email' => 'email',
@@ -16,7 +16,7 @@ return function($site, $pages, $page) {
         )
       )
     )
-  );
+  ;
 
   return compact('form');
 };

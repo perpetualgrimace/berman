@@ -24,7 +24,7 @@
     <input type="text" name="website" id="website" class="uniform__potty" style="display: none;">
 
     <div class="field g-col u-left-right u-padding-bottom-off">
-      <button name="_submit" class="contact-submit button u-margin-top-sm" type="submit" value="<?= $form->token() ?>"<?php e($form->successful(), ' disabled')?>><?= $page->submitButton() ?></button>
+      <button name="_submit" class="contact-submit button u-margin-top-sm" type="submit" value="<? //= $form->token() ?>"<?php // e($form->successful(), ' disabled')?>><?= $page->submitButton() ?></button>
     </div>
 
   </div>
