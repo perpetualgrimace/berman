@@ -20,6 +20,6 @@ if ($page->heroImg() != '') {
 
 <div class="hero u-margin-top-off">
   <?php if ($img != NULL): ?>
-    <div class="hero-img" style="background-image: url(<?= $img->url() ?>)" alt="" draggable="false"></div>
+    <div class="hero-img" style="background-image: url('<?= $img->url() ?>')" alt="" draggable="false"></div>
   <?php endif ?>
 </div>
