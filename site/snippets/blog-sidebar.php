@@ -2,7 +2,8 @@
 
 // variables
 $limit   = 5;
-$series  = relatedpages($Options = ['searchField' => 'Series', 'baseURL' => 'blog'])->flip()->limit($limit);
+$series  = $pages->pluck("series")->limit($limit);
+// TODO: test relatedpages($Options = ['searchField' => 'Series', 'baseURL' => 'blog'])->flip()->limit($limit);
 $authors = pages($page->authors()->toStructure());
 
 
@@ -19,14 +20,3 @@ snippet('blog-sidebar-authors', [
   'series'  => $series,
   'authors' => $authors
 ]);
-
-
-/* unused features
-$related_primary = relatedpages($Options = ['searchField' => 'primary_topic', 'startURI' => 'blog']);
-$related_secondary = relatedpages($Options = ['searchField' => 'secondary_topic', 'startURI' => 'blog']);
-
-// manual related pages
-elseif($page->related_manual() != '') {
-  $articles = $page->related_manual()->toStructure();
-  snippet('blog-sidebar-related-manual', ['articles' => $articles]);
-} */
