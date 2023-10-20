@@ -14,7 +14,7 @@
   <h2 class="gamma u-margin-bottom-sm">More in this series:</h2>
   <ul class="vertical-list u-margin-top-off-children">
 
-  <?php foreach($series->flip() as $article) {
+  <?php foreach($series as $article) {
     snippet('related-article', [
       'article' => $article,
       'showSeriesName' => FALSE
