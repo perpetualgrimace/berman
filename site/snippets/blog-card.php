@@ -3,25 +3,22 @@
 $authors = $article->authors()->toStructure();
 $authorCount = 0; // init
 
-// dump($authors);
-
 // get number of authors
 foreach ($authors as $author) {
   $authorCount++;
 }
 // one author
 if ($authorCount == 1 && $article->template() != 'blog-berman140') {
-  $author = $pages->find('about/people/' . $article->authors()->toStructure());
-  // $authorClass = $author->slug(); // TODO: fix
-  $authorClass = "jberman";
-  // $authorLink = $pages->find('blog')->url() . '#' . $author->slug();
-  // $authorLink = $author->url();
-  // $authorName = $author->title();
-  $authorName = "Jeff Berman"; // TODO: fix
+  $authorObj = $authors->first()->author();
+
+  $authorClass = $authorObj->slug();
+  $authorLink = $pages->find('blog')->url() . '#' . $authorObj->slug();
+  $authorName = $authorObj->title();
+
 // multiple authors
 } else {
   $authorClass = 'berman';
-  // $authorLink = $pages->find('blog')->url() . '#berman';
+  $authorLink = $pages->find('blog')->url() . '#berman';
   // $authorLink = $pages->find('about/people')->url();
   $authorName = 'Berman Team';
 }

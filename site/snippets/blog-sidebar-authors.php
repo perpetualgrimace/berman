@@ -2,7 +2,7 @@
 
 // get up to three authors for current post
 // NOTE: assumes Berman140 author field is blank
-foreach($page->authors()->toStructure()->limit(3) as $author):
+foreach($page->authors()->toStructure()->first()->author() as $author):
 
   // get the author's name from the corresponding person page
   $authorName = $pages->find('about/people/' . $author)->firstname();

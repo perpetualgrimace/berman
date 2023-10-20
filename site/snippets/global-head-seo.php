@@ -70,7 +70,7 @@ foreach ($authors as $author) {
 
 // one author
 if ($authorCount == 1 && $page->template() != 'blog-berman140') {
-  $author = $pages->find('about/people/' . $page->authors()->toStructure())->title();
+  $author = $pages->find('about/people/' . $page->authors()->toStructure()->first()->author())->title();
 // multiple authors
 } else {
   $author = 'Berman Team';

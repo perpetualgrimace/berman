@@ -10,7 +10,7 @@ foreach ($authors as $author) {
 }
 // one author
 if ($authorCount == 1 && $page->template() != 'blog-berman140') {
-  $authorPage = $pages->find('about/people/' . $page->authors()->toStructure());
+  $authorPage = $pages->find('about/people/' . $page->authors()->toStructure()->first()->author());
   $author = $authorPage->slug();
   $authorName = $authorPage->title();
   // get image if an image is found

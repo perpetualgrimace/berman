@@ -2,9 +2,9 @@
 
 // variables
 $limit   = 5;
-$series  = $pages->pluck("series")->limit($limit);
+$series  = $pages->pluck("series");
 // TODO: test relatedpages($Options = ['searchField' => 'Series', 'baseURL' => 'blog'])->flip()->limit($limit);
-$authors = pages($page->authors()->toStructure());
+$authors = pages($page->authors()->toStructure()->first()->author());
 
 
 // in a series
