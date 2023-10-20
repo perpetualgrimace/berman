@@ -26,6 +26,15 @@ $max-booklet-height: 70vh;
   }
 }
 
+.work-booklet-section {
+  min-height: 300px;
+
+  .booklet-container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 // override overflow: hidden so edges don't get cut off during transform
 .booklet-container .bx-viewport {
   overflow: visible !important;
@@ -93,6 +102,8 @@ $max-booklet-height: 70vh;
 // custom pager
 .booklet-nextprev-list {
   width: 100%;
+  position: absolute;
+  bottom: 0;
   text-align: center;
 
   // grid override; increase specificity
@@ -115,7 +126,7 @@ $max-booklet-height: 70vh;
 }
 
 // nextprev link
-.booklet-nextprev-item > a[class*='bx-'] {
+.booklet-nextprev-item > a[class*="bx-"] {
   // set to block in order to position pseudo element
   display: block;
   // background: blue; // debugging

@@ -25,14 +25,11 @@ ________img.one-pager-img
   }
 }
 
-
 // link
 .one-pager-link {
-  @media (min-width: $m2) {
-    @include perspective-parent;
-    // reset grid padding to remove gutter
-    padding: 0 !important;
-  }
+  @include perspective-parent;
+  // reset grid padding to remove gutter
+  padding: 0 !important;
 }
 
 // set descending z-index for links
@@ -41,7 +38,6 @@ ________img.one-pager-img
     z-index: 3 - $i;
   }
 }
-
 
 // caption
 /*
@@ -52,7 +48,6 @@ ________img.one-pager-img
   }
 }
 */
-
 
 // img
 .one-pager-img {
@@ -65,7 +60,6 @@ ________img.one-pager-img
     transform: rotateY(-15deg) scale(1.125);
   }
 }
-
 
 // hover
 .one-pager-link:hover,
@@ -86,7 +80,6 @@ ________img.one-pager-img
 .mfp-bg .one-pager-img {
   opacity: 0.1;
 }
-
 
 // exceptions
 /*

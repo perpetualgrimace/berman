@@ -33,8 +33,8 @@
 
 // font smoothing
 @mixin font-smoothing {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ////////////////////////////////
@@ -56,7 +56,7 @@
     margin-right: 0;
     float: right;
   }
-  &:nth-last-of-type(-n+#{$numPerRow}) {
+  &:nth-last-of-type(-n + #{$numPerRow}) {
     margin-bottom: 0;
   }
   &:last-of-type {
@@ -81,14 +81,17 @@
 
 // Psuedo elements
 @mixin pseudo {
-  content: '';
+  content: "";
   display: block;
 }
 
 // Fill up an absolutely 100% amount of space
 @mixin inflate {
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -139,23 +142,22 @@
   text-overflow: ellipsis;
 }
 
-
 ////////////////////////////////
 // background images
 ////////////////////////////////
 
 // hidpi mixin, somewhat inspired by responsive.scss.
 @mixin hidpi($multiplier: 1.5) {
-  @media (min-device-pixel-ratio: $multiplier), (min-resolution: (96dpi * $multiplier)) {
+  @media (min-device-pixel-ratio: $multiplier),
+    (min-resolution: (96dpi * $multiplier)) {
     @content;
   }
 }
 
 // Svg background with fallback and retina support
-@mixin svg($filename, $path : "img/") {
+@mixin svg($filename, $path: "img/") {
   background-image: url(../../#{$path}#{$filename}.png);
-  background-image:
-    linear-gradient(transparent, transparent),
+  background-image: linear-gradient(transparent, transparent),
     url(../../#{$path}#{$filename}.svg);
 }
 
@@ -170,7 +172,6 @@
     background-image: url(../../img/backgrounds/#{$filename}@2x.#{$extension});
   }
 }
-
 
 ////////////////////////////////
 // shadow
@@ -195,19 +196,14 @@
   text-shadow: 0 1px 0.25em $shadow-color;
 }
 
-
 ////////////////////////////////
 // perspective
 ////////////////////////////////
 
-@mixin perspective-parent($perspective: 600) {
+@mixin perspective-parent($perspective: 600px) {
   display: block;
-  /* autoprefixer: off */
-  -webkit-perspective: $perspective;
-  /* autoprefixer: on */
   perspective: $perspective;
 }
-
 
 ////////////////////////////////
 // nav / dropdown-menu
@@ -233,7 +229,6 @@
   }
 }
 
-
 ////////////////////////////////
 // button base style
 ////////////////////////////////
@@ -253,14 +248,17 @@
   border-radius: $radius;
 }
 
-
 ////////////////////////////////
 // gradient
 ////////////////////////////////
 
 @mixin brand-gradient {
   background-color: $secondary-color;
-  background-image: linear-gradient(315deg, $secondary-color 10%, $brand-color 90%);
+  background-image: linear-gradient(
+    315deg,
+    $secondary-color 10%,
+    $brand-color 90%
+  );
   transform: scale(1);
 }
 
@@ -269,25 +267,18 @@
 ////////////////////////////////
 
 @mixin fuzzy-shadow($color: $brand-color) {
-  text-shadow:
-    0 1px 1.125em rgba($color, 0.4);
+  text-shadow: 0 1px 1.125em rgba($color, 0.4);
 }
 
 @mixin long-shadow($color: $brand-color) {
   text-shadow:
     // 0 1px 1.125em rgba($color, 0.4), // awkward transition on chrome 58
-    1px 1px 0 $color,
-    2px 2px 0 $color,
-    3px 3px 0 $color;
+    1px 1px 0 $color, 2px 2px 0 $color, 3px 3px 0 $color;
 }
 
 @mixin longer-shadow($color: $brand-color) {
   text-shadow:
     // 0 1px 1.125em rgba($color, 0.4), // awkward transition on chrome 58
-    1px 1px 0 $color,
-    2px 2px 0 $color,
-    3px 3px 0 $color,
-    4px 4px 0 $color,
-    5px 5px 0 $color,
-    6px 6px 0 $color;
+    1px 1px 0 $color, 2px 2px 0 $color, 3px 3px 0 $color, 4px 4px 0 $color,
+    5px 5px 0 $color, 6px 6px 0 $color;
 }
