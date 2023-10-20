@@ -2,8 +2,8 @@
 
 // the next page will be the next project,
 // unless there are no older projects, in which case it will be the latest project
-if ($page->hasNextVisible()) {
-  $next = $page->nextVisible();
+if ($page->hasNextListed()) {
+  $next = $page->nextListed();
 } else {
   $next = $page->siblings()->listed()->first();
 }

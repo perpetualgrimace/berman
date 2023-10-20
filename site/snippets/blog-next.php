@@ -3,8 +3,8 @@
 $articles = $page->parent()->children()->listed()->flip();
 
 // grab the next most recent article of the year
-if ($page->hasPrevVisible()) {
-  $next = $page->prevVisible();
+if ($page->hasPrevListed()) {
+  $next = $page->prevListed();
 // if no more exist for that year, and if there are posts available from the previous year, grab the most recent from the previous year
 } elseif ($page->parent()->hasPrevPage() && $page != $page->parent()->siblings()->first()->children()->listed()->first()) {
   $next = $page->parent()->prev()->children()->listed()->last();
