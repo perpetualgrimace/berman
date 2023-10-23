@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // get the list of youtube videos
 $videos = $section->videoList()->toStructure();
 
@@ -49,3 +51,5 @@ $jsDataAttrPrev = 'data-js="video-slider-prev"';
     </div>
   </div>
 </section>
+
+<?php endif ?>

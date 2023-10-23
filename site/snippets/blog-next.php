@@ -14,16 +14,18 @@ if ($page->hasPrevListed()) {
 }
 
 // next image
-if ($next->nextImg() != '') {
-  $nextImg = $next->image($next->nextImg());
-} elseif ($next->image($site->nextImg())) {
-  $nextImg = $next->image($site->nextImg());
-} elseif ($next->heroImg() != '') {
-  $nextImg = $next->image($next->heroImg());
-} elseif ($next->image($site->heroImg())) {
-  $nextImg = $next->image($site->heroImg());
-} else {
-  $nextImg = NULL;
+if (isset($next)) {
+  if ($next->nextImg() != '') {
+    $nextImg = $next->image($next->nextImg());
+  } elseif ($next->image($site->nextImg())) {
+    $nextImg = $next->image($site->nextImg());
+  } elseif ($next->heroImg() != '') {
+    $nextImg = $next->image($next->heroImg());
+  } elseif ($next->image($site->heroImg())) {
+    $nextImg = $next->image($site->heroImg());
+  } else {
+    $nextImg = NULL;
+  }
 }
 
 ?>
@@ -36,23 +38,25 @@ if ($next->nextImg() != '') {
 </section>
 
 <!-- next link -->
-<section class="u-fullwidth next g-columns no-padding u-margin-bottom-off">
+<?php if ($next): ?>
+  <section class="u-fullwidth next g-columns no-padding u-margin-bottom-off">
 
-  <!-- the link -->
-  <a href="<?= $next->url() ?>" class="next-link g-container u-padding-top-xl u-padding-bottom-xl">
-    <div class="g-col u-margin-top u-margin-bottom">
-      <h2 class="next-title display"><span class="u-screenreader">Next up: </span>
-        <?php snippet('blog-title', ['article' => $next]) ?>
-      </h2>
-    </div>
-  </a>
+    <!-- the link -->
+    <a href="<?= $next->url() ?>" class="next-link g-container u-padding-top-xl u-padding-bottom-xl">
+      <div class="g-col u-margin-top u-margin-bottom">
+        <h2 class="next-title display"><span class="u-screenreader">Next up: </span>
+          <?php snippet('blog-title', ['article' => $next]) ?>
+        </h2>
+      </div>
+    </a>
 
-  <!-- background image -->
-  <?php if ($nextImg != NULL): ?>
-    <div class="next-img u-margin-top-off" data-bg-src="<?= $nextImg->url() ?>"></div>
-    <noscript>
-      <div class="next-img u-margin-top-off" style="background-image: url(<?= $nextImg->url() ?>);"></div>
-    </noscript>
+    <!-- background image -->
+    <?php if ($nextImg != NULL): ?>
+      <div class="next-img u-margin-top-off" data-bg-src="<?= $nextImg->url() ?>"></div>
+      <noscript>
+        <div class="next-img u-margin-top-off" style="background-image: url(<?= $nextImg->url() ?>);"></div>
+      </noscript>
+      <?php endif ?>
+
+    </section>
   <?php endif ?>
-
-</section>

@@ -114,10 +114,6 @@ These days, I keep most of my files in a (link: http://dropbox.com text: Dropbox
 
 There's another place for transient files that you may be familiar with: the downloads folder. I don't know about you, but my downloads folder is usually the messiest corner of my computer, piled high with forgotten, duplicate, and unused files. So I set up a simple Automator task that grabs every new file in the downloads folder and tosses it over to the desktop. No files left behind.
 
-Feel free to (file: downloads-to-desktop.zip text: download it) if you'd like.
-
-
-
 ##3. Customize it
 
 *Jess:* Look, not everyone worships at the feet of Apple. I do, you don't, and that's okay. I feel we've reached a point in our relationship, random person reading this post, where we can coexist despite our technological differences. Because I'm so okay with your love affair with the PC, I've included examples of customization for both types of systems. As long as your desktop doesn't look like a 2nd grade classroom's lunch area, our relationship will stand the test of time. I have faith in that.
@@ -130,7 +126,7 @@ Feel free to (file: downloads-to-desktop.zip text: download it) if you'd like.
 
 (link: http://projects.tynsoe.org/en/geektool/ text: GeekTool) is the Rainmeter for Mac. Except it's better, because you are on a Mac.
 
-(link: http://flavours.interacto.net text: Flavours 2) - Change the colors, themes, and look of your Mac, for a small but very real fee. This is for those individuals who exist in the venn diagram of willing to spend money on themes to redesign their computer...but just not too much money.  
+(link: http://flavours.interacto.net text: Flavours 2) - Change the colors, themes, and look of your Mac, for a small but very real fee. This is for those individuals who exist in the venn diagram of willing to spend money on themes to redesign their computer...but just not too much money.
 
 
 ##4. Helpful things
@@ -145,7 +141,7 @@ Flux allows your computers color to adapt to the time of day. Or, you could pret
 
 Get it for (link: https://justgetflux.com/ text: Mac)
 
-Get a (link: http://www.apple.com/shop/buy-mac/mac-pro/ text: Mac). Just kidding, here's the link for (link: http://www.pcworld.com/product/1116448/f-lux.html/ text: PC)  
+Get a (link: http://www.apple.com/shop/buy-mac/mac-pro/ text: Mac). Just kidding, here's the link for (link: http://www.pcworld.com/product/1116448/f-lux.html/ text: PC)
 
 
 

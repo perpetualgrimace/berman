@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // First, check for screenshots field.
 if ($section->screenshots() != '') {
   $images = $section->screenshots()->toStructure();
@@ -35,14 +37,7 @@ $count = $images->count();
   <ul class="screenshot-list g-columns g-doubling u-margin-top-off-children">
 
     <?php foreach($images as $image):
-      // if using the slides field, use the image function and get a valid url
-      if ($section->screenshots() != '') {
-        $imgUrl = $section->image($image->screenshot())->url();
-      }
-      // otherwise, we collected the images through the images function, so just grab the url
-      else {
-        $imgUrl = $image->url();
-      }
+      $imgUrl = $image->url();
     ?>
 
       <li class="screenshot-item g-col <?= $gridClass ?>">
@@ -57,3 +52,5 @@ $count = $images->count();
     <?php endforeach ?>
   </ul>
 </div>
+
+<?php endif ?>

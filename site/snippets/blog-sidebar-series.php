@@ -3,14 +3,14 @@
 ?>
 
 <!-- get series description -->
-<?php if($pages->find('blog/series/' . $page->series())->description() != ''): ?>
+<?php /* if($pages->find('blog/series/' . $page->series())->description() != ''): ?>
 
   <div class="container series-description delta">
     <h2 class="gamma u-margin-bottom-sm">About this series:</h2>
     <?= $pages->find('blog/series/' . $page->series())->description()->kirbytext() ?>
   </div>
 
-<?php endif ?>
+<?php endif */ ?>
 
 <!-- more from this series -->
 <div class="container series">

@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // First, check for pages field.
 if ($section->pages() != '') {
   $images = $section->pages()->toStructure();
@@ -71,3 +73,5 @@ $jsDataAttrPrev = 'data-js="booklet-slider-prev-' . $section->idNumber() . '"';
     </div>
   </div>
 </div>
+
+<?php endif ?>

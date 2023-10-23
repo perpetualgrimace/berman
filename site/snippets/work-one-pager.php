@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // First, check for pages field.
 if ($section->pages() != '') {
   $images = $section->pages()->toStructure();
@@ -52,3 +54,5 @@ $jsDataAttr = 'data-js="one-pager-' . $section->idNumber() . '"';
 
   </div><!-- .g-columns -->
 </article><!-- .one-pager -->
+
+<?php endif ?>

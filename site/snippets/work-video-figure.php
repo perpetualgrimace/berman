@@ -1,5 +1,7 @@
 <?php
 
+if(isset($video)):
+
 if ($video->platform() == 'youtube') {
   $embedPath = '//youtube.com/embed/';
 } elseif ($video->platform() == 'vimeo') {
@@ -20,3 +22,5 @@ if ($video->platform() == 'youtube') {
     </noscript>
   </figure>
 </div>
+
+<?php endif ?>

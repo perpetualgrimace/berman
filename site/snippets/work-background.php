@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // check to see if an image has been specified
 if ($section->background() != '') {
   $img = $section->image($section->background());
@@ -25,3 +27,5 @@ if ($section->background() != '') {
     </div>
   <?php endif ?>
 </section>
+
+<?php endif ?>

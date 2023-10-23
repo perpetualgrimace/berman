@@ -1,3 +1,4 @@
+<?php if(isset($section)): ?>
 <article class="work-textblock-section section g-columns">
   <div class="g-col g-8 u-margins-auto">
 
@@ -13,3 +14,4 @@
 
   </div>
 </article>
+<?php endif ?>

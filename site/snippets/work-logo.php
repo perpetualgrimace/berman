@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // check for svg logo first
 if ($section->image($section->logoImgSvg()) || $section->image('logo.svg')) {
   // explicit svg file set
@@ -57,3 +59,5 @@ if ($section->image($section->logoImgSvg()) || $section->image('logo.svg')) {
     </div><!-- .work-logo-container.g-col -->
   </div><!-- .g-columns -->
 </section><!-- .work-logo-section -->
+
+<?php endif ?>

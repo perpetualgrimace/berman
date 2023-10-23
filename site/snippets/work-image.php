@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // check for specified image
 if ($section->img() != '') {
   $img = $section->image($section->img());
@@ -36,3 +38,5 @@ if ($section->img() != '') {
 
   </div>
 </article>
+
+<?php endif ?>

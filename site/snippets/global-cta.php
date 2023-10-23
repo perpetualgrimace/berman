@@ -4,7 +4,7 @@
 if($page->cta() != '') {
   $cta = $page->cta();
   $ctaText = $page->ctaText();
-  $ctaLink = $pages->find($page->ctaLink())->url();
+  $ctaLink = $page->ctaLink()->url();
   $ctaButtonText = $page->CtaButton();
 } else {
   $cta = $site->cta();

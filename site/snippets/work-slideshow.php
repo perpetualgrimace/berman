@@ -1,5 +1,7 @@
 <?php
 
+if(isset($section)):
+
 // First, check for slides field.
 if ($section->slides() != '') {
   $slides = $section->slides()->toStructure();
@@ -47,3 +49,5 @@ $jsDataAttr = 'data-js="work-slideshow"';
 
   </ul><!-- .work-slideshow-list -->
 </div><!-- .work-slideshow-section.u-fullwidth -->
+
+<?php endif ?>
