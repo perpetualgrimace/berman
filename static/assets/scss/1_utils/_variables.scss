@@ -1,0 +1,84 @@
+////////////////////////////////
+// colors
+////////////////////////////////
+
+$brand-color: #2629A8;
+
+$secondary-color: #6dbfac;
+$secondary-color-light: #C9E4DC;
+$secondary-color-dark: #009F80;
+
+$error-color: #D73800;
+
+$black:   #201F2D;
+$dark-2:  #444353;
+$dark-1:  #686879;
+$gray:    #8C8C9E;
+$light-2: #B0B1C4;
+$light-1: #D5D6E9;
+$white:   #FFFFFF;
+
+$shadow: rgba($black, 0.5);
+$shadow-subtle : rgba($black, 0.25);
+$shadow-dark : rgba($black, 0.75);
+
+$philo-trash    : #91cb55;
+$beacon-blue    : #0065a4;
+
+$facebook-color  : #3b5998;
+$twitter-color   : #00aced;
+$linkedin-color  : #0077B5;
+$google-color    : #DD4B39;
+$instagram-color : #f50000;
+
+
+////////////////////////////////
+// font sizes
+////////////////////////////////
+
+$giga:    4.00rem; // 80px
+$alpha:   2.75rem; // 60px
+$beta:    2.00rem; // 40px
+$gamma:   1.25rem; // 20px
+$delta:   1.00rem; // 20px
+$epsilon: 0.85rem; // use sparingly!
+$milli:   0.75rem; // 14px
+
+
+////////////////////////////////
+// measurements
+////////////////////////////////
+
+$stroke-thin: 1px;
+$stroke-width: 2px;
+$stroke-thick: 0.25rem;
+
+$gutter: 1rem;
+$max-container-width: 64rem;
+
+$nav-height: 2.45rem; // 49px
+
+$thumb-width: 8rem; // 160px
+$thumb-height: 6rem; // 120px
+
+$radius: 2px;
+
+// limit line lenghts
+$max-length-display: 50em;
+$max-length-body: 40em;
+
+
+////////////////////////////////
+// breakpoints
+////////////////////////////////
+
+$sm1:  20em;      // 320px;
+$sm2:  30em;      // 480px;
+
+ $m1:  40em;      // 640px;
+ $m2:  56.25em;   // 900px;
+ $m3:  64em;      // 1024px;
+
+ $l1:  80em;      // 1280px;
+ $l2:  90em;      // 1400px;
+ $l3:  100em;     // 1600px;

@@ -1,0 +1,82 @@
+////////////////////////////////
+// next up introductory text
+////////////////////////////////
+
+.next-up {
+  // stop the slideshow block from splilling into the next link
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+
+////////////////////////////////
+// big ol' next button
+////////////////////////////////
+
+// container
+.next {
+  @include brand-gradient;
+  clear: both; // clear
+  overflow: hidden;
+}
+
+// big ol' link
+.next-link {
+  display: block;
+  z-index: 1;
+}
+.next-img {
+  @include inflate;
+  background-size: cover;
+  background-position: center;
+}
+
+// interactions
+.next-link {
+  @include long-shadow;
+
+  > .g-col {
+    float: none;
+  }
+
+  &:hover, &:focus, &:active {
+    background: none;
+
+    .next-title {
+      @include longer-shadow;
+    }
+
+    + .next-img {
+      opacity: 0.33;
+    }
+  }
+
+  &:hover + .next-img,
+  &:focus + .next-img {
+    transform: scale(1.025);
+  }
+  &:active + .next-img {
+    transform: none;
+  }
+}
+
+// title
+.next-title {
+  z-index: 1;
+  color: $white;
+}
+
+// series
+.series-label {
+  @include fuzzy-shadow; // no long shadow for small type
+}
+
+
+////////////////////////////////
+// work pages
+////////////////////////////////
+
+.work-next-title {
+  @include text-shadow;
+}

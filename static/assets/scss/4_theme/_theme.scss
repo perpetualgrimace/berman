@@ -1,0 +1,176 @@
+////////////////////////////////
+// base theme (light)
+////////////////////////////////
+
+// main style
+main,
+.announcement {
+  background: $white;
+  color: $black;
+
+  // links
+  a {
+    color: $brand-color;
+
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
+
+    &:active {
+      color: $secondary-color-dark;
+    }
+  }
+
+  // underline links within p tags
+  p a {
+    text-decoration: underline;
+  }
+}
+
+header ~ * {
+  background: $white;
+}
+
+
+////////////////////////////////
+// dark theme
+////////////////////////////////
+
+// remember to move this into its own file if it gets unruly
+.t-dark {
+  background: $black;
+  color: $white;
+
+  a {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
+  }
+}
+
+
+////////////////////////////////
+// page border
+////////////////////////////////
+
+// for top border, nav uses box-shadow to ignore positioning
+
+/*
+.nav-container {
+  box-shadow: 0 $stroke-width 0 $white; // initial border size
+  //scale up
+  @media (min-width: $sm2) {
+    box-shadow: 0 $stroke-thick 0 $white;
+  }
+}
+*/
+/*
+// for left and right border, apply pseudo elements to main
+// footer:before,
+// footer:after,
+main:before,
+main:after {
+  @include pseudo;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  width: $stroke-width; // initial border size
+  background: $white;
+  //scale up
+  @media (min-width: $sm2) {
+    width: $stroke-thick;
+  }
+}
+// footer:before,
+main:before {
+  left: 0;
+}
+// footer:after,
+main:after {
+  right: 0;
+}
+
+footer {
+  border-bottom: $stroke-thick solid $white;
+}
+*/
+// the bottom border is the footer
+
+
+////////////////////////////////
+// section border
+// TODO: rewrite this bad thing
+////////////////////////////////
+
+section.fullwidth + section.fullwidth:not(.u-margin-top-off):before {
+  @include pseudo;
+  position: relative;
+  background: $black;
+  height: #{$stroke-thick / 2};
+  max-width: $max-container-width;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  top: -($gutter * 2);
+
+  @media (min-width: $m1) {
+    top: -($gutter * 3);
+  }
+
+  @media (min-width: $l1) {
+    top: -($gutter * 4);
+  }
+}
+
+// exceptions that I couldn't :not() out
+.work-background + section.fullwidth:before,
+.u-no-border:before,
+body.work section.fullwidth:before {
+  display: none !important;
+}
+
+
+////////////////////////////////
+// enhancements
+////////////////////////////////
+
+// selection
+::selection {
+  color: $white;
+  background: rgba($brand-color, 0.9);
+}
+img::selection {
+  background: rgba($brand-color, 0.5);
+}
+
+// focus style
+:focus {
+  outline: none;
+  background: rgba($light-1, 0.35);
+}
+
+
+main:focus {
+  background: $white;
+}
+
+.mfp-wrap:focus {
+  background: none;
+}
+
+
+////////////////////////////////
+// dev
+////////////////////////////////
+
+// browsersync notification
+#__bs_notify__ {
+  @include horizontal-center;
+  opacity: 0.4;
+  pointer-events: none;
+}

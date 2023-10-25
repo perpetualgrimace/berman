@@ -1,0 +1,94 @@
+// Not sure what this stuff was used for, or when I commented it out. TODO: investigate.
+
+/*
+
+.social {
+  display: block;
+  height: auto;
+
+  svg {
+    width: 2.5rem;
+  }
+
+  + .social {
+    margin-left: 1rem * 0.5;
+    }
+
+    g {
+      fill: $black;
+      opacity: 0.5;
+      }
+
+  }
+
+.social:hover,
+.social:focus,
+.social:active {
+
+  g {
+    opacity: 1;
+    }
+
+  .social-twitter {
+    fill: $twitter-color;
+    }
+
+  .social-facebook {
+    fill: $facebook-color;
+    }
+
+  .social-linkedin {
+    fill: $linkedin-color;
+    }
+}
+
+%social-icon {
+   content: '';
+   display: inline-block;
+   float: left;
+   width: 22px;
+   height:22px;
+   margin-right: 1rem * 0.5;
+   background-color: $black;
+   border-radius: 100%;
+   vertical-align: bottom;
+   background-repeat: no-repeat;
+   }
+
+[href*="twitter.com"]:not(.social) {
+
+   &:before {
+      @include svg(twitter, "img/icons/");
+      @include social-icon;
+      }
+
+   &:hover:before {
+      background-color: $twitter-color;
+      }
+   }
+
+[href*="facebook"]:not(.social) {
+
+   &:before {
+      @include svg(facebook, "img/icons/");
+      @include social-icon;
+      }
+
+   &:hover:before {
+      background-color: $facebook-color;
+      }
+   }
+
+[href^="mailto:"]:not(.social) {
+
+   &:before {
+      @include svg(email, "img/icons/");
+      @include social-icon;
+      }
+
+   &:hover:before {
+      background-color: $facebook-color;
+      }
+   }
+
+*/

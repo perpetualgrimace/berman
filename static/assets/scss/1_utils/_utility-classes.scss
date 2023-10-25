@@ -1,0 +1,220 @@
+////////////////////////////////
+// layout
+////////////////////////////////
+
+.u-fullwidth {
+  @include fullwidth; // expand horizontally to fill up viewport
+}
+
+.u-limit-width {
+  max-width: $max-length-body !important;
+}
+
+// vertically center child elements via flexbox
+.u-vertical-center {
+  @media(min-width: $m2) {
+    @include flex-vertical-center;
+  }
+}
+
+// stretch to fill container with the power of flexbox
+.u-full-height {
+  @media(min-width: $m2) {
+    display: flex;
+  }
+}
+
+
+////////////////////////////////
+// typography
+////////////////////////////////
+
+// alignment classes -- the same on all screen sizes
+.u-left {
+  text-align: left;
+}
+.u-right {
+  text-align: right;
+}
+.u-center {
+  text-align: center;
+}
+
+// switch alignment around 630px width (mobile first)
+.u-center-left {
+  text-align: center;
+  @media (min-width: $m1) { text-align: left; }
+}
+.u-center-right {
+  text-align: center;
+  @media (min-width: $m1) { text-align: right; }
+}
+.u-left-center {
+  text-align: left;
+  @media (min-width: $m1) { text-align: center; }
+}
+.u-left-right {
+  text-align: left;
+  @media (min-width: $m1) { text-align: right; }
+}
+.u-right-left {
+  text-align: right;
+  @media (min-width: $m1) { text-align: left; }
+}
+.u-right-center {
+  text-align: right;
+  @media (min-width: $m1) { text-align: center; }
+}
+
+.u-underline {
+  text-decoration: underline !important;
+}
+
+.u-underline-off {
+  text-decoration: none !important;
+}
+
+// make a link look like body text
+.u-unlink-body {
+  @include lato;
+  text-decoration: none;
+  color: $black;
+}
+
+// screen reader text
+.u-screenreader {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+////////////////////////////////
+// show / hide content
+////////////////////////////////
+
+// hide on small screens
+.u-hide-below-m2 {
+  @media (max-width: $m2 - 0.001) {
+    display: none;
+  }
+}
+.u-hide-below-m3 {
+  @media (max-width: $m3 - 0.001) {
+    display: none;
+  }
+}
+
+// hide on large screens
+.u-hide-above-m3 {
+  @media (min-width: $m3) {
+    display: none;
+  }
+}
+
+
+////////////////////////////////
+// margins
+////////////////////////////////
+
+// margin-top
+.u-margin-top-sm {
+  margin-top: $gutter / 2 !important;
+}
+.u-margin-top {
+  margin-top: $gutter !important;
+}
+.u-margin-top-lg {
+  margin-top: $gutter * 2 !important;
+}
+.u-margin-top-xl {
+  margin-top: $gutter * 3 !important;
+}
+.u-margin-top-off {
+  margin-top: 0 !important;
+}
+.u-margin-top-off-children > * + * {
+  margin-top: 0; // no need for !important, just overriding the * + * selector
+}
+
+// margin-bottom
+.u-margin-bottom-sm {
+  margin-bottom: $gutter / 2 !important;
+}
+.u-margin-bottom {
+  margin-bottom: $gutter !important;
+}
+.u-margin-bottom-lg {
+  margin-bottom: $gutter * 2 !important;
+}
+.u-margin-bottom-xl {
+  margin-bottom: $gutter * 3 !important;
+}
+.u-margin-bottom-off {
+  margin-bottom: 0 !important;
+}
+
+// horizontally center block elements
+.u-margins-auto {
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+////////////////////////////////
+// padding
+////////////////////////////////
+
+// padding
+.u-padding {
+  padding: $gutter !important;
+}
+
+// padding-top
+.u-padding-top-sm {
+  padding-top: $gutter / 2 !important;
+}
+.u-padding-top {
+  padding-top: $gutter !important;
+}
+.u-padding-top-lg {
+  padding-top: $gutter * 2 !important;
+}
+.u-padding-top-xl {
+  padding-top: $gutter * 3 !important;
+}
+.u-padding-top-off {
+  padding-top: 0 !important;
+}
+
+// padding-bottom
+.u-padding-bottom-sm {
+  padding-bottom: $gutter / 2 !important;
+}
+.u-padding-bottom {
+  padding-bottom: $gutter !important;
+}
+.u-padding-bottom-lg {
+  padding-bottom: $gutter * 2 !important;
+}
+.u-padding-bottom-xl {
+  padding-bottom: $gutter * 3 !important;
+}
+.u-padding-bottom-off {
+  padding-bottom: 0 !important;
+}
+
+
+////////////////////////////////
+// float
+////////////////////////////////
+
+.u-float-left {
+  float: left !important;
+}
+
+.u-float-right {
+  float: right !important;
+}

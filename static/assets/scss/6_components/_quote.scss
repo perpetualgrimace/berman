@@ -1,0 +1,56 @@
+/*  MODEL:
+
+div.quote-container
+__ div.g-columns
+____ div.g-col
+______ blockquote.quote-blockquote
+________ p.quote-text
+________ p.quote-attribution
+
+*/
+
+
+// container style
+.quote-container {
+  @include brand-gradient;
+  @include fuzzy-shadow;
+  color: $white;
+  z-index: 1;
+}
+
+// fudge quote back to the left to show more of the image on the right
+.quote-blockquote {
+  @media (min-width: $m2) {
+    left: -10%;
+  }
+}
+
+.quote-blockquote:before {
+  @include longer-shadow;
+  font-size: $giga * 1.5;
+  top: 2.75rem;
+  left: 0;
+
+  @media (min-width: $m2) {
+    font-size: $giga * 2;
+    top: 3.5rem;
+    left: -1rem;
+  }
+
+  @media (min-width: $l1) {
+    left: -4rem;
+  }
+}
+
+.quote-text {
+  @include long-shadow;
+}
+
+.quote-img {
+  @include inflate;
+  opacity: 0.875;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  z-index: -1;
+}

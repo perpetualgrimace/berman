@@ -1,0 +1,9 @@
+// header
+.home-header {
+  height: 60vh;
+
+  @media (min-width: $m3) and (min-aspect-ratio: 3/2) {
+    height: 8vh;
+    height: calc(100vh - 4.5rem);
+  }
+}

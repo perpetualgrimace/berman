@@ -1,0 +1,34 @@
+// wrapper
+.announcement-wrapper {
+  @include inflate;
+  position: fixed;
+  background: rgba($black, 0.85);
+  z-index: 999; // inentionally excessive
+
+  &.is-hidden {
+    display: none !important;
+  }
+
+  &.is-visible > .announcement {
+    opacity: 1;
+  }
+}
+
+// modal
+.announcement {
+  @include absolute-center;
+  width: 85%;
+  padding: $gutter * 2;
+  max-width: $m1;
+  background: $white;
+}
+
+h1:focus {
+  background: black;
+}
+
+
+// override button lowercase rule
+.announcement-dismiss {
+  text-transform: none !important;
+}

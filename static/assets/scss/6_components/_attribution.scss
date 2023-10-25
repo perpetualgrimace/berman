@@ -1,0 +1,48 @@
+// attribution bubble
+.attribution {
+  display: inline-block;
+  margin-top: 1em;
+  padding-right: $gutter;
+  left: $gutter;
+
+  > * {
+    color: $white;
+  }
+}
+
+.attribution-avatar,
+.attribution-caption {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// image
+.attribution-avatar {
+  @include fuzzy-shadow;
+  background: $white;
+  left: -$gutter;
+  height: 2.5rem;
+  width: 2.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.attribution-caption {
+  top: -1px;
+}
+
+.attribution-text {
+  @include lato;
+}
+
+// hover treatment
+.attribution:hover,
+.attribution:active,
+.attribution:focus {
+  background: $secondary-color;
+  color: $white;
+
+  .attribution-avatar {
+    transform: scale(1.25);
+  }
+}

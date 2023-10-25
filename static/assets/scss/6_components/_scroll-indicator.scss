@@ -1,0 +1,41 @@
+// scroll indicator
+.scroll-indicator-container {
+  display: block;
+  position: relative;
+  left: 0;
+  height: 1px;
+  margin-top: -1px;
+  z-index: 8;
+  width: 100%;
+  text-align: center;
+}
+
+.scroll-indicator-link {
+  display: block;
+  margin: 0 auto;
+  padding: 0; // override button style
+  width: 2.8rem;
+  height: 2.8rem;
+  top: -1.4rem;
+  border-radius: 50%;
+  z-index: 2;
+  text-align: center;
+
+  &:hover .scroll-indicator-svg polygon,
+  &:focus .scroll-indicator-svg polygon {
+    fill: $secondary-color-dark;
+  }
+  &:active .scroll-indicator-svg polygon {
+    fill: $secondary-color;
+  }
+
+  &:hover, &:focus {
+    @include box-shadow-lg;
+  }
+}
+
+.scroll-indicator-svg {
+  width: 1.7rem;
+  height: auto;
+  top: 0.825rem;
+}

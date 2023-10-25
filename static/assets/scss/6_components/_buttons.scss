@@ -1,0 +1,79 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// OG button
+.button {
+  @include button-base;
+  background-image: radial-gradient(ellipse at top center, rgba($white, 0.15) 0, rgba($black, 0) 100%); // radial glossy overlay
+
+  &:hover, &:focus {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+  &:focus {
+    @include box-shadow-focus;
+  }
+  &:active {
+    background-color: $secondary-color-dark;
+    border-color: $secondary-color-dark;
+  }
+}
+
+// inverted
+.button-inverted {
+  @include button-base($white, $brand-color);
+  @include box-shadow;
+  background-image: linear-gradient(to bottom, $white 0%,rgba($black, 0.05) 100%); // linear glossy overlay
+
+  &:hover, &:focus {
+    color: $secondary-color-dark !important;
+  }
+  &:active {
+    color: $secondary-color !important;
+  }
+}
+
+// click!
+[class*=button],
+button,
+input[type=button] {
+  &:active {
+    transform: translateY(1px) scale(0.95);
+  }
+}
+
+
+////////////////////////////////
+// legacy
+////////////////////////////////
+
+// TODO: rename this nonsense
+.content-button {
+  display: block;
+  overflow: hidden;
+  padding: 0.75rem 1rem;
+
+  &:active, &:focus {
+    z-index: 10;
+  }
+}
+
+.grid-2,
+.blogs .row {
+
+  @media (min-width: $m3) {
+    .blog-thumb {
+      opacity: 0.9;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+
+      .blog-thumb {
+        opacity: 1;
+      }
+    }
+  }
+}

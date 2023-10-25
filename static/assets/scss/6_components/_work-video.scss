@@ -1,0 +1,51 @@
+// override grid settings for column to make room for pagination
+.video-caption.g-col {
+  @media (min-width: $m2) {
+    padding-right: $gutter * 2;
+  }
+}
+
+// if js is enabled, add padding to video container
+html:not(.no-js) .video-list {
+  padding-top: 60%;
+}
+// hide adjacent videos until javascript has loaded
+html.no-js .video-item + .video-item {
+  height: 0 !important;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+// ignore parent padding via positioning
+.video-item {
+  top: 0;
+  background: black;
+}
+
+// custom pager
+.video-pager-list {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+// list item placement
+.video-pager-item {
+  position: absolute;
+
+  &-left {
+    left: -$gutter;
+  }
+  &-right {
+    right: -$gutter;
+  }
+
+  // link style
+  & > a {
+    font-size: $beta;
+    line-height: 0.1;
+    padding: 0 ($gutter * 0.5) ($gutter * 0.5) ($gutter * 0.5);
+  }
+
+}

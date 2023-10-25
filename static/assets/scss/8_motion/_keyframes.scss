@@ -1,0 +1,34 @@
+.scroll-indicator {
+  animation: bounce 2.5s ease-in-out;
+  animation-delay: 30s;
+  animation-iteration-count: 3;
+}
+
+.error {
+  animation: slidedown 0.35s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(0, 1rem/3);
+  }
+  30% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translate(0, -1em);
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+    z-index: 1;
+  }
+}

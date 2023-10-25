@@ -1,0 +1,82 @@
+// container
+.work-screenshot-section {
+  padding-left: $gutter;
+  padding-right: $gutter;
+  background: rgba($light-1, 0.5);
+
+  &.default-background {
+    background-color: rgba($light-1, 0.5);
+  }
+  &.twitter-background {
+    background-color: $twitter-color;
+  }
+  &.facebook-background {
+    background-color: $facebook-color;
+  }
+  &.instagram-background {
+    background: $instagram-color
+      linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+  }
+}
+
+// list & layout
+.screenshot-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 76rem; // Going with what feels right. Only tested with 4 columns though.
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// link
+.screenshot-link {
+  display: block; // extend clickable range
+
+  &:hover,
+  &:focus {
+    transform: scale(1.0625) rotateZ(2deg);
+
+    .screenshot-img {
+      @include box-shadow-lg($shadow-color: #{rgba($shadow, 0.325)});
+    }
+  }
+}
+
+// img
+.screenshot-img {
+  @include box-shadow-lg($shadow-color: #{rgba($shadow, 0.15)});
+  border-radius: $radius; // must be specified again here because border-raidus + overflow:hidden won't work on lazyloaded images
+}
+
+// horizontal overflow on smaller screens
+@media (max-width: $m3 - 0.001) {
+  // container
+  .work-screenshots-inline {
+    padding: 0 !important;
+
+    // list
+    .screenshot-list {
+      display: block !important;
+      padding: #{$gutter * 1.5} $gutter;
+      white-space: nowrap;
+      overflow: auto;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+
+      // item (nested to increase specifity)
+      .screenshot-item {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40% !important; // override grid class
+        min-width: 18rem;
+        float: none;
+
+        &:last-of-type {
+          margin-right: $gutter * 1.5;
+        }
+      }
+    }
+  }
+}

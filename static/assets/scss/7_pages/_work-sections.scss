@@ -1,0 +1,99 @@
+// section padding overrides
+.work-textblock-section + .work-image-section,
+.work-textblock-section + .work-booklet-section,
+.work-textblock-section + .work-one-pager-section,
+.work-textblock-section + .work-logo-section,
+.work-textblock-section + .work-video-section,
+.work-image-section + .work-one-pager-section,
+.work-image-section + .work-textblock-section,
+.work-booklet-section + .work-textblock-section,
+.work-one-pager-section + .work-textblock-section,
+.work-video-section + .work-textblock-section,
+.work-video-section + .work-image-section,
+.work-logo-section + .work-booklet-section,
+.work-logo-section + .work-one-pager-section,
+.work-logo-section + .work-textblock-section,
+// grid padding overrides
+.work-textblock-section + .work-booklet-section .booklet-caption,
+.work-textblock-section + .work-video-section .video-caption,
+.work-video-section + .work-textblock-section > .g-col,
+.work-video-section + .work-image-section .work-image-caption,
+.work-image-section + .work-textblock-section > .g-col,
+.work-booklet-section + .work-textblock-section > .g-col {
+  padding-top: 0;
+}
+
+
+// offset section padding with negative margin
+.work-textblock-section + .work-logo-section,
+.work-textblock-section + .work-booklet-section,
+.work-textblock-section + .work-image-section,
+.work-textblock-section + .work-video-section,
+.work-logo-section + .work-booklet-section,
+.work-logo-section + .work-one-pager-section,
+.work-logo-section + .work-textblock-section {
+  margin-top: -$gutter;
+  margin-top: calc(#{-$gutter / 2} - 2vw);
+}
+
+
+// offset grid padding with negative margin
+[class*='work'][class*='section'] + .work-logo-section .work-logo-caption,
+[class*='work'][class*='section'] + .work-image-section .work-image-caption {
+  margin-top: -$gutter;
+  margin-bottom: -$gutter;
+}
+
+
+// offset next link
+.work-textblock-section + .next-up,
+.work-image-section + .next-up,
+.work-video-section + .next-up {
+  margin-top: -1.5rem;
+}
+
+
+// offset negative margin with positive margin
+.work-logo-section + .work-background-section {
+  margin-top: $gutter;
+}
+
+
+
+// smaller screens only
+@media (max-width: $m2 - 0.001) {
+
+  // section padding overrides
+  .work-booklet-section + .work-textblock-section,
+  // grid padding overrides
+  .work-textblock-section + .work-one-pager-section .one-pager-caption,
+  .work-image-section + .work-one-pager-section .one-pager-caption {
+    padding-top: 0;
+  }
+
+  // offset section padding with negative margin
+  .work-textblock-section + .work-one-pager-section,
+  .work-booklet-section + .work-textblock-section,
+  .work-one-pager-section + .work-textblock-section {
+    margin-top: -$gutter;
+    margin-top: calc(#{-$gutter / 2} - 2vw);
+  }
+
+  // remove bottom and top padding
+  /*
+  .work-image-section .work-image-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  */
+}
+
+
+// larger screens only
+@media (min-width: $m2) {
+
+  // grid padding overrides
+  .work-logo-section + .work-one-pager-section .g-col {
+    padding-top: 0;
+  }
+}
