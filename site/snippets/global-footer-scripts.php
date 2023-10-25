@@ -18,7 +18,7 @@
 
   (function(d) {
     var config = {
-      kitId: 'xol1ufh',
+      kitId: 'jyh0lhn',
       scriptTimeout: 3000,
       async: true
     },
